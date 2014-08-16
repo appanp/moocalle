@@ -86,9 +86,10 @@ function get_posts_list(delay, pg_id) {
     get_posts_list.page_id = Number(pg_id);
     get_posts_list.timestamp = Date.now();
 		get_posts_list.max_page_id = 500;
+		get_posts_list.fetched_posts = 0;
 	}
   else {
-    console.log("...Time to fetch 25 posts: " + (Date.now() - get_posts_list.timestamp));
+    console.log("...Time to fetch "+get_posts_list.fetched_posts+" posts: " + (Date.now() - get_posts_list.timestamp));
     get_posts_list.timestamp = Date.now();
   	get_posts_list.page_id += 1;
 	}
@@ -119,6 +120,7 @@ function get_posts_list(delay, pg_id) {
 					for(var i=0;i < posts.length;i++) {
 						urls.push(posts[i]['_link']);
 					}
+					get_posts_list.fetched_posts = urls.length;
 					setTimeout(function() {
                         get_posts_in(urls,delay);
                         },delay);

@@ -9,7 +9,7 @@ var zlib = require('zlib');
 //Cookie to set in request header
 //User-Agent = Mozilla / 5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
 //csrf_token & CAUTH tokens have to be set manually
-var cookie = 'csrf_token=FILL UP YOUR TOKEN; CAUTH=FILL UP YOUR TOKEN';
+//var cookie = 'csrf_token=FILL UP YOUR TOKEN; CAUTH=FILL UP YOUR TOKEN';
 
 var default_headers = {
   'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:7.0.1) Gecko/20100101 Firefox/31.0',
@@ -85,7 +85,7 @@ function get_posts_list(delay, pg_id) {
   if ( typeof get_posts_list.page_id == 'undefined') {
     get_posts_list.page_id = Number(pg_id);
     get_posts_list.timestamp = Date.now();
-	get_posts_list.max_page_id = 500;
+		get_posts_list.max_page_id = 500;
 	}
   else {
     console.log("...Time to fetch 25 posts: " + (Date.now() - get_posts_list.timestamp));
@@ -142,6 +142,17 @@ function get_posts_list(delay, pg_id) {
 // START of the MAIN program
 // Do the initialization of creating required dirs & 
 // reading in the state stored from previous run
+var class_dir = '../'+class_name
+var class_posts_dir = '../'+class_name+'/posts';
+var class_lists_dir = '../'+class_name+'/lists';
+
+try {
+    fs.mkdirSync(class_dir);
+    fs.mkdirSync(class_posts_dir);
+    fs.mkdirSync(class_lists_dir);
+  } catch(e) {
+    if ( e.code != 'EEXIST' ) throw e;
+  }
 
 // Format the initial request and get the first page of posts
 get_posts_list(delay,strt_page_id);

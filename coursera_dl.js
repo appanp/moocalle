@@ -63,16 +63,20 @@ function get_posts_in(urls,delay) {
 		if (rsp.headers['content-encoding'] == 'gzip') {
 			zlib.gunzip(body, function(err2, dezipped) {
             	var json_str = dezipped.toString('utf-8');
-				var json_obj = JSON.parse(json_str);
-				//console.log('...JSON Rsp.: ');
-				fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
+				if (dezipped.length != 0) {
+                    var json_obj = JSON.parse(json_str);
+				    fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
+                }
+                else {
+                    console.log("...Ignoring post id: "+post_id+" 'coz of zero length");
+                }
 				if (urls.length == 0) {
-					get_posts_list(delay);
+				    get_posts_list(delay);
 				}
 				else {
 					setTimeout(function() {
-                        get_posts_in(urls,delay);
-                        },delay);
+                            get_posts_in(urls,delay);
+                            },delay);
 				}
 			  });
   			//fs.writeFile('rsp_json.gz',body);

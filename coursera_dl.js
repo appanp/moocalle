@@ -86,7 +86,7 @@ function get_posts_in(urls,delay) {
 		}
       }
       else {
-        console.log('...Error fetching post id: '+post_id);
+        console.log('...Error fetching post id: '+post_id+", Error is: "+rsp.statusCode);
       }
   	});
 }
@@ -110,7 +110,7 @@ function get_posts_list(delay, pg_id) {
   op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
   if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
    var urls = [];
-   if (typeof pg_id != 'undefined') {
+   if (typeof pg_id != 'undefined' && pg_id != 1) {
         var json_file = class_lists_dir+'/'+pg_id+'.json';
         var lst_json_str = fs.readFileSync(json_file);
         var lst_json_obj = JSON.parse(lst_json_str);
@@ -181,7 +181,8 @@ try {
   } catch(e) {
     if ( e.code == 'EEXIST' ) {
         list_files = fs.readdirSync(class_lists_dir);
-        strt_page_id = list_files.length;
+        if (list_files.length != 0)
+                strt_page_id = list_files.length;
         }
     else throw e;
   }

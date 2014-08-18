@@ -86,7 +86,7 @@ function get_posts_in(urls,delay) {
 		}
       }
       else {
-        console.log('...Error fetching post id: '+post_id+", Error is: "+rsp.statusCode);
+        console.log('...Error fetching post id: '+post_id+", Error is: "+err);
       }
   	});
 }
@@ -161,7 +161,7 @@ function get_posts_list(delay, pg_id) {
 			}
       	  }
           else {
-            console.log('...Error fetching posts page, error is: '+rsp.statusCode);
+            console.log('...Error fetching posts page, error is: '+err);
           }
   		});
        }

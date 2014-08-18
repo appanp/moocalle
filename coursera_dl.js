@@ -122,8 +122,12 @@ function get_posts_list(delay, pg_id) {
             urls.push(posts[i]['_link']);
 		}
 		get_posts_list.fetched_posts = urls.length;
-        console.log("...Resuming from post id: "+urls[0]);
-        get_posts_in(urls,delay);
+        if (urls.length != 0) {
+            console.log("...Resuming from post id: "+urls[0]);
+            get_posts_in(urls,delay);
+        }
+        else
+            console.log("...Fetched everything - nothing left to resume");
    }
    else {
    	request({

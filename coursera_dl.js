@@ -24,7 +24,7 @@ var default_headers = {
 };
 
 if (process.argv.length < 4) {
-        console.log("Usage: node get_forum_posts.js <coursera class name> <req. delay>");
+        console.log("Usage: node get_forum_posts.js <coursera class name>|ALL <req. delay> ");
         process.exit(1);
 }
 var class_name = process.argv[2];
@@ -36,12 +36,16 @@ var class_dir = '../'+class_name
 var class_posts_dir = '../'+class_name+'/posts';
 var class_lists_dir = '../'+class_name+'/lists';
 
-if (process.argv.length >=5) {
-    strt_page_id = process.argv[4];
-}
-
-function get_list_urls() {
-
+function get_updates_from(page_id) {
+    if (typeof get_updates_from.last_update_time == 'undefined') {
+        file = class_lists_dir+'/'+page_id+'.json';
+        var data = fs.readFileSync(file);
+        var lst_json_obj = JSON.parse(data);
+        get_updates_from.last_update_time = lst_json_obj['threads'][0]['last_updated_time'];
+    }
+    //Now filter on posts which re newer than last_updated_time
+    console.log("Local last updated time is: "+get_updates_from.last_update_time);
+    get_posts_list(delay,page_id,get_updates_from.last_update_time);
 }
 
 function get_posts_in(urls,delay) {
@@ -94,21 +98,49 @@ function get_posts_in(urls,delay) {
 // Function to get the URL of a page of forum posts
 // url is just a string of an existing URL of a posts page
 // Returns the loist of URLs of the posts in the page
-function get_posts_list(delay, pg_id) {
+function get_posts_list(delay, pg_id, last_update_time) {
+  function stop_fetching() {
+    if ( get_posts_list.last_update_time == 0 &&
+        (get_posts_list.page_id <= get_posts_list.max_page_id) ) {
+            return false;
+    }
+    else
+        return get_posts_list.found_non_updated;
+  }
+
+  //Start of this function
   if ( typeof get_posts_list.page_id == 'undefined') {
     get_posts_list.page_id = Number(pg_id);
     get_posts_list.timestamp = Date.now();
 	get_posts_list.max_page_id = 500;
 	get_posts_list.fetched_posts = 0;
+    get_posts_list.found_non_updated = false;
+    if ( typeof last_update_time != 'undefined' )
+        get_posts_list.last_update_time = last_update_time;
+    else
+        get_posts_list.last_update_time = 0;
+
 	}
   else {
-    console.log("...Time to fetch "+get_posts_list.fetched_posts+" posts: " + (Date.now() - get_posts_list.timestamp));
+    console.log("...Time to fetch "+get_posts_list.fetched_posts+" posts: "
+                + (Date.now() - get_posts_list.timestamp));
     get_posts_list.timestamp = Date.now();
-  	get_posts_list.page_id += 1;
-	}
+  	if (typeof pg_id == 'undefined')
+            get_posts_list.page_id += 1;
+    else
+            get_posts_list.page_id = pg_id;
+    if ( typeof last_update_time != 'undefined' )
+        get_posts_list.last_update_time = last_update_time;
+  }
 
   op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
-  if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
+  //if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
+  console.log("...last_update_time: "+get_posts_list.last_update_time);
+  console.log("...max_page_id: "+get_posts_list.max_page_id);
+  console.log("...page_id: "+get_posts_list.page_id);
+  console.log("...found_non_updated: "+get_posts_list.found_non_updated);
+  console.log("...stop_fetching returned: "+stop_fetching() );
+  if ( !stop_fetching() ) {
    var urls = [];
    if (typeof pg_id != 'undefined' && pg_id != 1) {
         var json_file = class_lists_dir+'/'+pg_id+'.json';
@@ -119,15 +151,38 @@ function get_posts_list(delay, pg_id) {
 		posts = lst_json_obj['threads']
         list_files = fs.readdirSync(class_posts_dir);
 		for(var i=list_files.length % 25;i < posts.length;i++) {
-            urls.push(posts[i]['_link']);
+            var last_upd_time = posts[i]['last_updated_time'];
+            if (last_upd_time > get_posts_list.last_update_time)
+                urls.push(posts[i]['_link']);
+            else
+                get_posts_list.found_non_updated = true;
 		}
 		get_posts_list.fetched_posts = urls.length;
+        console.log("...urls array length: "+urls.length);
         if (urls.length != 0) {
-            console.log("...Resuming from post id: "+urls[0]);
-            get_posts_in(urls,delay);
+            //Extract the post id & chk if it is already there
+            urls_last = urls[urls.length - 1];
+            post_id = urls_last.substr(urls_last.lastIndexOf('=')+1);
+            file = class_posts_dir+'/'+post_id+'.json';
+            console.log("...Trying to read post file: "+file);
+            try {
+                var data = fs.readFileSync(file);
+                console.log("...Nothing left to resume, but new posts found ...");
+                urls = [];
+                get_updates_from(1);
+            } catch(e) {
+                if ( e.code == 'ENOENT' ) {
+                    console.log("...Resuming from post id: "+urls[0]);
+                    get_posts_in(urls,delay);
+                }
+                else throw e;
+            }
         }
-        else
+        else {
             console.log("...Fetched everything - nothing left to resume");
+            console.log("......There could be some updates - checking ...");
+            get_updates_from(1);
+        }
    }
    else {
    	request({
@@ -150,14 +205,27 @@ function get_posts_list(delay, pg_id) {
 					get_posts_list.max_page_id = json_obj['max_pages'];
 					//Get the list of post URLs & return the array of URLs
 					posts = json_obj['threads']
+                    console.log("Current last updated time of 1st post: "+ 
+                                posts[0]['last_updated_time']);
+                    console.log("Current last updated time of 25th post: "+ 
+                                posts[posts.length-1]['last_updated_time']);
 					for(var i=0;i < posts.length;i++) {
-						urls.push(posts[i]['_link']);
+                        var last_upd_time = posts[i]['last_updated_time'];
+                        if (last_upd_time > get_posts_list.last_update_time)
+                            urls.push(posts[i]['_link']);
+                        else
+                            get_posts_list.found_non_updated = true;
 					}
 					get_posts_list.fetched_posts = urls.length;
-					setTimeout(function() {
-                        get_posts_in(urls,delay);
-                        },delay);
-					});
+                    console.log("...urls array length: "+urls.length);
+                    if (urls.length != 0) {
+					    setTimeout(function() {
+                            get_posts_in(urls,delay);
+                            },delay);
+                    }
+                    else
+                        console.log("...Updated everything - Ending");
+				    });
   			//fs.writeFile('rsp_json.gz',body);
         	}
 			else {
@@ -186,7 +254,7 @@ try {
     if ( e.code == 'EEXIST' ) {
         list_files = fs.readdirSync(class_lists_dir);
         if (list_files.length != 0)
-                strt_page_id = list_files.length;
+            strt_page_id = list_files.length;
         }
     else throw e;
   }

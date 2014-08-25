@@ -100,9 +100,11 @@ function get_posts_in(urls,delay) {
 // Returns the loist of URLs of the posts in the page
 function get_posts_list(delay, pg_id, last_update_time) {
   function stop_fetching() {
-    if ( get_posts_list.last_update_time == 0 &&
-        (get_posts_list.page_id <= get_posts_list.max_page_id) ) {
+    if ( get_posts_list.last_update_time == 0 ) {
+        if (get_posts_list.page_id <= get_posts_list.max_page_id)
             return false;
+        else
+            return true;
     }
     else
         return get_posts_list.found_non_updated;
@@ -135,11 +137,6 @@ function get_posts_list(delay, pg_id, last_update_time) {
 
   op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
   //if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
-  console.log("...last_update_time: "+get_posts_list.last_update_time);
-  console.log("...max_page_id: "+get_posts_list.max_page_id);
-  console.log("...page_id: "+get_posts_list.page_id);
-  console.log("...found_non_updated: "+get_posts_list.found_non_updated);
-  console.log("...stop_fetching returned: "+stop_fetching() );
   if ( !stop_fetching() ) {
    var urls = [];
    if (typeof pg_id != 'undefined' && pg_id != 1) {
@@ -233,7 +230,10 @@ function get_posts_list(delay, pg_id, last_update_time) {
 			}
       	  }
           else {
-            console.log('...Error fetching posts page, error is: '+err);
+            if (!err)
+                    console.log('...Error fetching posts page, error is: '+err);
+            else 
+                    console.log('...Error is null: could be tokens are invalid');
           }
   		});
        }

@@ -43,7 +43,7 @@ String.prototype.endsWith = function(suffix) {
 function get_list_ids() {
     var list_files = fs.readdirSync(class_lists_dir);
     var max_ver = 0;
-    var new_id = 0;
+    var new_id = 0, new_id_2 = 0;
     var curr_file_ts = 0;
     for(var i=0;i < list_files.length;i++) {
       if (list_files[i].endsWith('.json')) {
@@ -56,13 +56,18 @@ function get_list_ids() {
         //}
         if (arr.length == 2 && (Number(arr[0]) > new_id) )
             new_id = Number(arr[0]);
-        if (arr.length > 2 && (Number(arr[1]) > max_ver) )
-            max_ver = Number(arr[1]);
-        console.log("...file:"+list_files[i]+" has ts: "+curr_file_ts);
+        if ( arr.length > 2 ) {
+            if (Number(arr[1]) > max_ver)
+                max_ver = Number(arr[1]);
+            if (Number(arr[0]) > new_id_2)
+                new_id_2 = Number(arr[0]);
+        }
+        //console.log("...file:"+list_files[i]+" has ts: "+curr_file_ts);
       }
     }
-    console.log("......pg_id: "+new_id+",  max_ver: "+max_ver);
-    return [new_id,max_ver];
+    var pg_id = (new_id_2 != 0) ? new_id_2 : new_id;
+    console.log("......pg_id: " + pg_id + ",  max_ver: " + max_ver);
+    return [pg_id,max_ver];
 }
 
 function get_updates_from(page_id,max_pg_ver) {
@@ -188,15 +193,13 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
         if (get_posts_list.max_pg_ver == 0)
             json_file = class_lists_dir+'/'+pg_id+'.json';
         else {
-            if (typeof last_update_time == 'undefined')
-                json_file = class_lists_dir+'/'+pg_id+'.json';
-            else
-                json_file = class_lists_dir+'/'+pg_id+'.'+get_posts_list.max_pg_ver+'.json';
+            json_file = class_lists_dir+'/'+pg_id+'.'+get_posts_list.max_pg_ver+'.json';
         }
+        console.log("...Trying to read list file: "+json_file);
         var lst_json_str = fs.readFileSync(json_file);
         var lst_json_obj = JSON.parse(lst_json_str);
 		get_posts_list.max_page_id = lst_json_obj['max_pages'];
-        console.log("...Max. pages to read: "+get_posts_list.max_page_id);
+        console.log("......Max. pages to read: "+get_posts_list.max_page_id);
 		//Get the list of post URLs & return the array of URLs
 		posts = lst_json_obj['threads']
         list_files = fs.readdirSync(class_posts_dir);
@@ -251,7 +254,6 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
             		var json_str = dezipped.toString('utf-8');
 					var json_obj = JSON.parse(json_str);
 					//console.log('...JSON Rsp.: ');
-					fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
 					get_posts_list.max_page_id = json_obj['max_pages'];
 					//Get the list of post URLs & return the array of URLs
 					posts = json_obj['threads']
@@ -269,6 +271,7 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
 					get_posts_list.fetched_posts = urls.length;
                     console.log("...urls array length: "+urls.length);
                     if (urls.length != 0) {
+					    fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
 					    setTimeout(function() {
                             get_posts_in(urls,delay);
                             },delay);

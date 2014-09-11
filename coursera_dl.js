@@ -166,7 +166,7 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
   }
 
   var op_file ='';
-  if (get_posts_list.max_pg_ver != 0)
+  if (get_posts_list.last_update_time != 0)
         op_file = class_lists_dir+'/'+get_posts_list.page_id+'.'+(get_posts_list.max_pg_ver+1)+'.json';
   else
         op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';

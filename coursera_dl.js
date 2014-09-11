@@ -35,24 +35,34 @@ var class_dir = '../'+class_name
 var class_posts_dir = '../'+class_name+'/posts';
 var class_lists_dir = '../'+class_name+'/lists';
 
+//New string function for endWith
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
 function get_list_ids() {
     var list_files = fs.readdirSync(class_lists_dir);
     var max_ver = 0;
-    var new_id = '';
-    var last_pg_id = 1;
+    var new_id = 0;
     var curr_file_ts = 0;
     for(var i=0;i < list_files.length;i++) {
+      if (list_files[i].endsWith('.json')) {
         arr = list_files[i].split('.');
-        f_stat = fs.statSync(class_lists_dir+'/'+list_files[i]);
-        if (f_stat['mtime'].valueOf() > curr_file_ts) {
-            curr_file_ts = f_stat['mtime'].valueOf();
-            new_id = list_files[i];
-        }
+        //Using fs.stat is not reliable, so returning max single digit file
+        //f_stat = fs.statSync(class_lists_dir+'/'+list_files[i]);
+        //if (f_stat['ctime'].valueOf() > curr_file_ts) {
+        //    curr_file_ts = f_stat['ctime'].valueOf();
+        //    new_id = list_files[i];
+        //}
+        if (arr.length == 2 && (Number(arr[0]) > new_id) )
+            new_id = Number(arr[0]);
         if (arr.length > 2 && (Number(arr[1]) > max_ver) )
             max_ver = Number(arr[1]);
+        console.log("...file:"+list_files[i]+" has ts: "+curr_file_ts);
+      }
     }
-    last_pg_id = new_id.split('.')[0];
-    return [Number(last_pg_id),max_ver];
+    console.log("......pg_id: "+new_id+",  max_ver: "+max_ver);
+    return [new_id,max_ver];
 }
 
 function get_updates_from(page_id,max_pg_ver) {
@@ -177,8 +187,12 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
         var json_file = '';
         if (get_posts_list.max_pg_ver == 0)
             json_file = class_lists_dir+'/'+pg_id+'.json';
-        else
-            json_file = class_lists_dir+'/'+pg_id+'.'+get_posts_list.max_pg_ver+'.json';
+        else {
+            if (typeof last_update_time == 'undefined')
+                json_file = class_lists_dir+'/'+pg_id+'.json';
+            else
+                json_file = class_lists_dir+'/'+pg_id+'.'+get_posts_list.max_pg_ver+'.json';
+        }
         var lst_json_str = fs.readFileSync(json_file);
         var lst_json_obj = JSON.parse(lst_json_str);
 		get_posts_list.max_page_id = lst_json_obj['max_pages'];

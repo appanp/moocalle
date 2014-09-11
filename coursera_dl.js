@@ -32,20 +32,45 @@ var api_pg_url = 'https://class.coursera.org/'+class_name+'/api/forum/forums/0/t
 var api_post_url_pfx = 'https://class.coursera.org/'+class_name+'/api/forum/threads/';
 var delay = process.argv[3]; //7 sec delay between requests
 var strt_page_id = 1;
+var max_page_version = 0;
 var class_dir = '../'+class_name
 var class_posts_dir = '../'+class_name+'/posts';
 var class_lists_dir = '../'+class_name+'/lists';
 
-function get_updates_from(page_id) {
+function get_list_ids() {
+    var list_files = fs.readdirSync(class_lists_dir);
+    var max_ver = 0;
+    var new_id = '';
+    var last_pg_id = 0;
+    var curr_file_ts = 0;
+    for(var i=0;i < list_files.length;i++) {
+        arr = list_files[i].split('.');
+        f_stat = fs.statSync(class_lists_dir+'/'+list_files[i]);
+        if (f_stat['mtime'].valueOf() > curr_file_ts) {
+            curr_file_ts = f_stat['mtime'].valueOf();
+            new_id = list_files[i];
+        }
+        if (arr.length > 2 && (Number(arr[1]) > max_ver) )
+            max_ver = Number(arr[1]);
+    }
+    last_pg_id = new_id.split('.')[0];
+    return [Number(last_pg_id),max_ver];
+}
+
+function get_updates_from(page_id,max_pg_ver) {
     if (typeof get_updates_from.last_update_time == 'undefined') {
-        file = class_lists_dir+'/'+page_id+'.json';
+        var file = '';
+        if (max_pg_ver == 0)
+            file = class_lists_dir+'/'+page_id+'.json';
+        else
+            file = class_lists_dir+'/'+page_id+'.'+max_pg_ver+'.json';
         var data = fs.readFileSync(file);
         var lst_json_obj = JSON.parse(data);
         get_updates_from.last_update_time = lst_json_obj['threads'][0]['last_updated_time'];
     }
     //Now filter on posts which re newer than last_updated_time
     console.log("Local last updated time is: "+get_updates_from.last_update_time);
-    get_posts_list(delay,page_id,get_updates_from.last_update_time);
+    get_posts_list(delay,page_id,max_pg_ver,get_updates_from.last_update_time);
 }
 
 function get_posts_in(urls,delay) {
@@ -98,7 +123,7 @@ function get_posts_in(urls,delay) {
 // Function to get the URL of a page of forum posts
 // url is just a string of an existing URL of a posts page
 // Returns the loist of URLs of the posts in the page
-function get_posts_list(delay, pg_id, last_update_time) {
+function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
   function stop_fetching() {
     if ( get_posts_list.last_update_time == 0 ) {
         if (get_posts_list.page_id <= get_posts_list.max_page_id)
@@ -121,7 +146,7 @@ function get_posts_list(delay, pg_id, last_update_time) {
         get_posts_list.last_update_time = last_update_time;
     else
         get_posts_list.last_update_time = 0;
-
+    get_posts_list.max_pg_ver = max_pg_ver;
 	}
   else {
     console.log("...Time to fetch "+get_posts_list.fetched_posts+" posts: "
@@ -135,15 +160,20 @@ function get_posts_list(delay, pg_id, last_update_time) {
         get_posts_list.last_update_time = last_update_time;
   }
 
-  op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
+  op_file = class_lists_dir+'/'+get_posts_list.page_id+'.'+(get_posts_list.max_pg_ver+1)+'.json';
   //if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
   if ( !stop_fetching() ) {
    var urls = [];
-   if (typeof pg_id != 'undefined' && pg_id != 1) {
-        var json_file = class_lists_dir+'/'+pg_id+'.json';
+   if (typeof pg_id != 'undefined') {
+        var json_file = '';
+        if (get_posts_list.max_pg_ver == 0)
+            json_file = class_lists_dir+'/'+pg_id+'.json';
+        else
+            json_file = class_lists_dir+'/'+pg_id+'.'+get_posts_list.max_pg_ver+'.json';
         var lst_json_str = fs.readFileSync(json_file);
         var lst_json_obj = JSON.parse(lst_json_str);
 		get_posts_list.max_page_id = lst_json_obj['max_pages'];
+        console.log("...Max. pages read: "+get_posts_list.max_page_id);
 		//Get the list of post URLs & return the array of URLs
 		posts = lst_json_obj['threads']
         list_files = fs.readdirSync(class_posts_dir);
@@ -166,7 +196,7 @@ function get_posts_list(delay, pg_id, last_update_time) {
                 var data = fs.readFileSync(file);
                 console.log("...Nothing left to resume, but new posts found ...");
                 urls = [];
-                get_updates_from(1);
+                get_updates_from(1,get_posts_list.max_pg_ver);
             } catch(e) {
                 if ( e.code == 'ENOENT' ) {
                     console.log("...Resuming from post id: "+urls[0]);
@@ -178,7 +208,7 @@ function get_posts_list(delay, pg_id, last_update_time) {
         else {
             console.log("...Fetched everything - nothing left to resume");
             console.log("......There could be some updates - checking ...");
-            get_updates_from(1);
+            get_updates_from(1,get_posts_list.max_pg_ver);
         }
    }
    else {
@@ -252,14 +282,14 @@ try {
     fs.mkdirSync(class_lists_dir);
   } catch(e) {
     if ( e.code == 'EEXIST' ) {
-        list_files = fs.readdirSync(class_lists_dir);
-        if (list_files.length != 0)
-            strt_page_id = list_files.length;
+        var max_ids = get_list_ids();
+        strt_page_id = max_ids[0];
+        max_page_version = max_ids[1];
         }
     else throw e;
   }
 
 // Format the initial request and get the first page of posts
-console.log('Starting with list ID: '+strt_page_id);
-get_posts_list(delay,strt_page_id);
+console.log('Starting with list ID: '+strt_page_id+' & page version: '+max_page_version);
+get_posts_list(delay,strt_page_id,max_page_version);
 

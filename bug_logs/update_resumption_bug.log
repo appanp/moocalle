@@ -1,0 +1,193 @@
+APsMBPro:src appanponnappan$ node coursera_dl_runver.js webapplications-002 6000
+......pg_id: 14,  max_ver: 0
+Starting with list ID: 14 & page version: 0
+...Trying to read list file: ../webapplications-002/lists/14.json
+......Max. pages to read: 14
+...urls array length: 1
+...Trying to read post file: ../webapplications-002/posts/8.json
+...Nothing left to resume, but new posts found ...
+Local last updated time is: 1408272679
+...Time to fetch 1 posts: 222
+Fetching posts page: 1
+Current last updated time of 1st post: 1410484421
+Current last updated time of 25th post: 1410440374
+...urls array length: 25
+...Time to fetch 25 posts: 199561
+Fetching posts page: 2
+Current last updated time of 1st post: 1410440262
+Current last updated time of 25th post: 1410364819
+...urls array length: 25
+...Time to fetch 25 posts: 220004
+Fetching posts page: 3
+Current last updated time of 1st post: 1410363868
+Current last updated time of 25th post: 1410250560
+...urls array length: 25
+...Time to fetch 25 posts: 201376
+Fetching posts page: 4
+Current last updated time of 1st post: 1410239931
+Current last updated time of 25th post: 1410163443
+...urls array length: 25
+...Time to fetch 25 posts: 201395
+Fetching posts page: 5
+Current last updated time of 1st post: 1410162004
+Current last updated time of 25th post: 1410101433
+...urls array length: 25
+...Time to fetch 25 posts: 196532
+Fetching posts page: 6
+Current last updated time of 1st post: 1410100913
+Current last updated time of 25th post: 1410021971
+...urls array length: 25
+...Time to fetch 25 posts: 196271
+Fetching posts page: 7
+Current last updated time of 1st post: 1410020900
+Current last updated time of 25th post: 1409894064
+...urls array length: 25
+...Time to fetch 25 posts: 196550
+Fetching posts page: 8
+Current last updated time of 1st post: 1409893467
+Current last updated time of 25th post: 1409815195
+...urls array length: 25
+...Time to fetch 25 posts: 197433
+Fetching posts page: 9
+Current last updated time of 1st post: 1409814678
+Current last updated time of 25th post: 1409730649
+...urls array length: 25
+...Time to fetch 25 posts: 198102
+Fetching posts page: 10
+Current last updated time of 1st post: 1409728476
+Current last updated time of 25th post: 1409657507
+...urls array length: 25
+...Time to fetch 25 posts: 197109
+Fetching posts page: 11
+Current last updated time of 1st post: 1409652060
+Current last updated time of 25th post: 1409580451
+...urls array length: 25
+...Error fetching post id: 898, Error is: Error: read ECONNRESET
+APsMBPro:src appanponnappan$ node coursera_dl_runver.js webapplications-002 6000
+......pg_id: 11,  max_ver: 1
+Starting with list ID: 11 & page version: 1
+...Trying to read list file: ../webapplications-002/lists/11.1.json
+......Max. pages to read: 40
+...urls array length: 3
+...Trying to read post file: ../webapplications-002/posts/883.json
+...Resuming from post id: https://class.coursera.org/webapplications-002/forum/thread?thread_id=74
+...Time to fetch 3 posts: 17837
+Fetching posts page: 12
+Current last updated time of 1st post: 1409574254
+Current last updated time of 25th post: 1409509571
+...urls array length: 25
+...Time to fetch 25 posts: 197473
+Fetching posts page: 13
+Current last updated time of 1st post: 1409507808
+Current last updated time of 25th post: 1409429596
+...urls array length: 25
+...Time to fetch 25 posts: 197322
+Fetching posts page: 14
+Current last updated time of 1st post: 1409422314
+Current last updated time of 25th post: 1409317721
+...urls array length: 25
+...Time to fetch 25 posts: 197105
+Fetching posts page: 15
+Current last updated time of 1st post: 1409314491
+Current last updated time of 25th post: 1409231422
+...urls array length: 25
+...Time to fetch 25 posts: 199081
+Fetching posts page: 16
+Current last updated time of 1st post: 1409224662
+Current last updated time of 25th post: 1409135334
+...urls array length: 25
+...Time to fetch 25 posts: 196767
+Fetching posts page: 17
+Current last updated time of 1st post: 1409133793
+Current last updated time of 25th post: 1409081580
+...urls array length: 25
+...Time to fetch 25 posts: 196416
+Fetching posts page: 18
+Current last updated time of 1st post: 1409078095
+Current last updated time of 25th post: 1409011441
+...urls array length: 25
+...Time to fetch 25 posts: 195742
+Fetching posts page: 19
+Current last updated time of 1st post: 1409007193
+Current last updated time of 25th post: 1408944869
+...urls array length: 25
+...Time to fetch 25 posts: 197402
+Fetching posts page: 20
+Current last updated time of 1st post: 1408944050
+Current last updated time of 25th post: 1408898733
+...urls array length: 25
+...Time to fetch 25 posts: 197688
+Fetching posts page: 21
+Current last updated time of 1st post: 1408898010
+Current last updated time of 25th post: 1408839749
+...urls array length: 25
+...Time to fetch 25 posts: 198828
+Fetching posts page: 22
+Current last updated time of 1st post: 1408835072
+Current last updated time of 25th post: 1408788808
+...urls array length: 25
+...Time to fetch 25 posts: 197462
+Fetching posts page: 23
+Current last updated time of 1st post: 1408788631
+Current last updated time of 25th post: 1408723085
+...urls array length: 25
+...Time to fetch 25 posts: 195558
+Fetching posts page: 24
+Current last updated time of 1st post: 1408719504
+Current last updated time of 25th post: 1408633676
+...urls array length: 25
+...Time to fetch 25 posts: 197416
+Fetching posts page: 25
+Current last updated time of 1st post: 1408630865
+Current last updated time of 25th post: 1408570678
+...urls array length: 25
+...Time to fetch 25 posts: 196742
+Fetching posts page: 26
+Current last updated time of 1st post: 1408564925
+Current last updated time of 25th post: 1408528332
+...urls array length: 25
+...Time to fetch 25 posts: 196298
+Fetching posts page: 27
+Current last updated time of 1st post: 1408525297
+Current last updated time of 25th post: 1408471505
+...urls array length: 25
+...Time to fetch 25 posts: 195210
+Fetching posts page: 28
+Current last updated time of 1st post: 1408470272
+Current last updated time of 25th post: 1408429374
+...urls array length: 25
+...Time to fetch 25 posts: 198147
+Fetching posts page: 29
+Current last updated time of 1st post: 1408427129
+Current last updated time of 25th post: 1408350053
+...urls array length: 25
+...Time to fetch 25 posts: 199437
+Fetching posts page: 30
+Current last updated time of 1st post: 1408343704
+Current last updated time of 25th post: 1408275762
+...urls array length: 25
+...Time to fetch 25 posts: 196778
+Fetching posts page: 31
+Current last updated time of 1st post: 1408272679
+Current last updated time of 25th post: 1408207671
+...urls array length: 25
+...Time to fetch 25 posts: 198544
+Fetching posts page: 32
+Current last updated time of 1st post: 1408206724
+Current last updated time of 25th post: 1408130357
+...urls array length: 25
+...Time to fetch 25 posts: 197327
+Fetching posts page: 33
+Current last updated time of 1st post: 1408130073
+Current last updated time of 25th post: 1408088612
+...urls array length: 25
+...Time to fetch 25 posts: 196225
+Fetching posts page: 34
+Current last updated time of 1st post: 1408086447
+Current last updated time of 25th post: 1408054414
+...urls array length: 25
+...Time to fetch 25 posts: 196278
+Fetching posts page: 35
+Current last updated time of 1st post: 1408052179
+Current last updated time of 25th post: 1408020012
+...urls array length: 25

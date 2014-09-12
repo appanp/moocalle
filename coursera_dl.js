@@ -24,13 +24,16 @@ var default_headers = {
 };
 
 if (process.argv.length < 4) {
-        console.log("Usage: node get_forum_posts.js <coursera class name>|ALL <req. delay> ");
+        console.log("Usage: node get_forum_posts.js <coursera class name>|ALL <req. delay> lists-only|stats|<blank>");
         process.exit(1);
 }
 var class_name = process.argv[2];
 var api_pg_url = 'https://class.coursera.org/'+class_name+'/api/forum/forums/0/threads?sort=lastupdated&page_size=25';
 var api_post_url_pfx = 'https://class.coursera.org/'+class_name+'/api/forum/threads/';
 var delay = process.argv[3]; //7 sec delay between requests
+var other_opts = '';
+if (process.argv.length > 4)
+    other_opts = process.argv[4]; //Fetch only lists or get statistics
 var class_dir = '../'+class_name
 var class_posts_dir = '../'+class_name+'/posts';
 var class_lists_dir = '../'+class_name+'/lists';
@@ -116,7 +119,7 @@ function get_posts_in(urls,delay) {
 				    get_posts_list(delay);
 				}
 				else {
-					setTimeout(function() {
+                    setTimeout(function() {
                             get_posts_in(urls,delay);
                             },delay);
 				}
@@ -202,7 +205,10 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
         console.log("......Max. pages to read: "+get_posts_list.max_page_id);
 		//Get the list of post URLs & return the array of URLs
 		posts = lst_json_obj['threads']
+        console.log("......Num. of posts in page: "+posts.length);
         list_files = fs.readdirSync(class_posts_dir);
+        //The following logic works only for the very first download
+        //This is for resumption from the very first download ONLY !!
 		for(var i=list_files.length % 25;i < posts.length;i++) {
             var last_upd_time = posts[i]['last_updated_time'];
             if (last_upd_time > get_posts_list.last_update_time)
@@ -211,7 +217,7 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
                 get_posts_list.found_non_updated = true;
 		}
 		get_posts_list.fetched_posts = urls.length;
-        console.log("...urls array length: "+urls.length);
+        console.log("...Resume for very 1st DL: urls array length: "+urls.length);
         if (urls.length != 0) {
             //Extract the post id & chk if it is already there
             urls_last = urls[urls.length - 1];
@@ -222,7 +228,10 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
                 var data = fs.readFileSync(file);
                 console.log("...Nothing left to resume, but new posts found ...");
                 urls = [];
-                get_updates_from(1,get_posts_list.max_pg_ver);
+                if (other_opts != 'lists-only')
+                    get_updates_from(1,get_posts_list.max_pg_ver);
+                else
+                    get_posts_list(delay);
             } catch(e) {
                 if ( e.code == 'ENOENT' ) {
                     console.log("...Resuming from post id: "+urls[0]);
@@ -234,7 +243,10 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
         else {
             console.log("...Fetched everything - nothing left to resume");
             console.log("......There could be some updates - checking ...");
-            get_updates_from(1,get_posts_list.max_pg_ver);
+            if (other_opts != 'lists-only')
+                get_updates_from(1,get_posts_list.max_pg_ver);
+            else
+                get_posts_list(delay);
         }
    }
    else {
@@ -269,11 +281,16 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
                             get_posts_list.found_non_updated = true;
 					}
 					get_posts_list.fetched_posts = urls.length;
-                    console.log("...urls array length: "+urls.length);
+                    console.log("...Updates DL: urls array length: "+urls.length);
                     if (urls.length != 0) {
 					    fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
-					    setTimeout(function() {
-                            get_posts_in(urls,delay);
+					    if ( other_opts != 'lists-only' )
+                            setTimeout(function() {
+                                    get_posts_in(urls,delay);
+                                },delay);
+                        else
+                            setTimeout(function() {
+                                    get_posts_list(delay);
                             },delay);
                     }
                     else

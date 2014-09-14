@@ -207,17 +207,29 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
 		posts = lst_json_obj['threads']
         console.log("......Num. of posts in page: "+posts.length);
         list_files = fs.readdirSync(class_posts_dir);
-        //The following logic works only for the very first download
-        //This is for resumption from the very first download ONLY !!
-		for(var i=list_files.length % 25;i < posts.length;i++) {
+        //This is for resumption from the very first download or updates download !!
+		for(var i=0;i < posts.length;i++) {
             var last_upd_time = posts[i]['last_updated_time'];
-            if (last_upd_time > get_posts_list.last_update_time)
-                urls.push(posts[i]['_link']);
-            else
-                get_posts_list.found_non_updated = true;
+            var post_url = posts[i]['_link'];
+            var post_id = post_url.substr(post_url.lastIndexOf('=')+1);
+            // If it is first run, only look for presence of file in list_files
+            // Else: jusr re-download all files which are recently updates.
+            if (get_posts_list.last_update_time == 0) {
+                if (list_files.indexOf(post_id+'.json') == -1)
+                    urls.push(post_url);
+            }
+            else {
+                if (last_upd_time > get_posts_list.last_update_time)
+                    urls.push(post_url);
+                else
+                    get_posts_list.found_non_updated = true;
+            }
 		}
 		get_posts_list.fetched_posts = urls.length;
-        console.log("...Resume for very 1st DL: urls array length: "+urls.length);
+        if (get_posts_list.last_update_time == 0)
+            console.log("...Resume from very 1st DL: urls array length: "+urls.length);
+        else
+            console.log("...Resume from last update DL: urls array length: "+urls.length);
         if (urls.length != 0) {
             //Extract the post id & chk if it is already there
             urls_last = urls[urls.length - 1];

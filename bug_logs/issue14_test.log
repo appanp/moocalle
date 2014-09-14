@@ -1,0 +1,32 @@
+APsMBPro:src appanponnappan$ node coursera_dl_runver.js repdata-006 6000
+Starting with list ID: 1 & page version: 0
+Fetching posts page: 1
+Current last updated time of 1st post: 1410686416
+Current last updated time of 25th post: 1410554372
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199421
+Fetching posts page: 2
+Current last updated time of 1st post: 1410543530
+Current last updated time of 25th post: 1410334068
+...Updates DL: urls array length: 25
+^CAPsMBPro:src appanponnappan$ node coursera_dl_runver.js repdata-006 6000
+......pg_id: 2,  max_ver: 0
+Starting with list ID: 2 & page version: 0
+...Trying to read list file: ../repdata-006/lists/2.json
+......Max. pages to read: 4
+......Num. of posts in page: 25
+...Resume from very 1st DL: urls array length: 12
+...Trying to read post file: ../repdata-006/posts/38.json
+...Resuming from post id: https://class.coursera.org/repdata-006/forum/thread?thread_id=68
+...Time to fetch 12 posts: 87802
+Fetching posts page: 3
+Current last updated time of 1st post: 1410326397
+Current last updated time of 25th post: 1409919563
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 197864
+Fetching posts page: 4
+Current last updated time of 1st post: 1409896674
+Current last updated time of 25th post: 1409525396
+...Updates DL: urls array length: 15
+...Time to fetch 15 posts: 118704
+...Terminating since reached max: 5/4

@@ -1,0 +1,264 @@
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js predmachlearn-005
+Usage: node get_forum_posts.js <coursera class name>|ALL <req. delay> lists-only|stats|<blank>
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js predmachlearn-005 6000
+......pg_id: 3,  max_ver: 0
+Resuming Download of 1st Time from page_id: 3 ...
+Starting with list ID: 3 & page version: 0
+...Trying to read list file: ../predmachlearn-005/lists/3.json
+......Max. pages to read: 3
+......Num. of posts in page: 24
+...Resume from very 1st DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410566778
+...Time to fetch 0 posts: 3
+Fetching posts page: 1
+...Error fetching posts page, error is: null
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js predmachlearn-005 6000
+......pg_id: 3,  max_ver: 0
+Resuming Download of 1st Time from page_id: 3 ...
+Starting with list ID: 3 & page version: 0
+...Trying to read list file: ../predmachlearn-005/lists/3.json
+......Max. pages to read: 3
+......Num. of posts in page: 24
+...Resume from very 1st DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410566778
+...Time to fetch 0 posts: 108
+Fetching posts page: 1
+...Error fetching posts page, error is: null
+(py34) APsMBPro:src appanponnappan$ 
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js predmachlearn-005 6000
+......pg_id: 3,  max_ver: 0
+Resuming Download of 1st Time from page_id: 3 ...
+Starting with list ID: 3 & page version: 0
+...Trying to read list file: ../predmachlearn-005/lists/3.json
+......Max. pages to read: 3
+......Num. of posts in page: 24
+...Resume from very 1st DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410566778
+...Time to fetch 0 posts: 4
+Fetching posts page: 1
+Current last updated time of 1st post: 1412015237
+Current last updated time of 25th post: 1411699042
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201967
+Fetching posts page: 2
+Current last updated time of 1st post: 1411685024
+Current last updated time of 25th post: 1411386391
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200022
+Fetching posts page: 3
+Current last updated time of 1st post: 1411375356
+Current last updated time of 25th post: 1411203939
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 202270
+Fetching posts page: 4
+Current last updated time of 1st post: 1411203838
+Current last updated time of 25th post: 1410819011
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199812
+Fetching posts page: 5
+Current last updated time of 1st post: 1410817123
+Current last updated time of 25th post: 1410435041
+...Updates DL: urls array length: 17
+...Time to fetch 17 posts: 138690
+...Terminating since reached max: 6/7
+(py34) APsMBPro:src appanponnappan$ ls ../devdataprod-005/lists/
+1.json	2.json
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js devdataprod-005 6000
+......pg_id: 2,  max_ver: 0
+Resuming Download of 1st Time from page_id: 2 ...
+Starting with list ID: 2 & page version: 0
+...Trying to read list file: ../devdataprod-005/lists/2.json
+......Max. pages to read: 2
+......Num. of posts in page: 22
+...Resume from very 1st DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410429419
+...Time to fetch 0 posts: 69
+Fetching posts page: 1
+Current last updated time of 1st post: 1412042020
+Current last updated time of 25th post: 1411484817
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198743
+Fetching posts page: 2
+Current last updated time of 1st post: 1411484673
+Current last updated time of 25th post: 1411236899
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199212
+Fetching posts page: 3
+Current last updated time of 1st post: 1411229133
+Current last updated time of 25th post: 1410594576
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 197823
+Fetching posts page: 4
+Current last updated time of 1st post: 1410586277
+Current last updated time of 25th post: 1409911689
+...Updates DL: urls array length: 8
+...Time to fetch 8 posts: 65291
+...Terminating since reached max: 5/5
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js datasci-002 6000
+......pg_id: 9,  max_ver: 2
+Resuming Download of Last Update with Ver: 2 ...
+Local last updated time is: 1410514257
+Starting with list ID: 9 & page version: 2
+Fetching posts page: 9
+Current last updated time of 1st post: 1409094898
+Current last updated time of 25th post: 1408969103
+...Updates DL: urls array length: 0
+...Updated everything - Ending
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js datasci-002 6000
+......pg_id: 1,  max_ver: 2
+Resuming Download of Last Update with Ver: 2 ...
+Local last updated time is: 1410514257
+Starting with list ID: 1 & page version: 2
+...Trying to read list file: ../datasci-002/lists/1.2.json
+......Max. pages to read: 97
+......Num. of posts in page: 25
+...Resume from last update DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410514257
+...Time to fetch 0 posts: 3
+...Terminating since reached max: 1/97
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js datasci-002 6000
+......pg_id: 1,  max_ver: 1
+Resuming Download of Last Update with Ver: 1 ...
+Local last updated time is: 1410510153
+Starting with list ID: 1 & page version: 1
+...Trying to read list file: ../datasci-002/lists/1.1.json
+......Max. pages to read: 97
+......Num. of posts in page: 25
+...Resume from last update DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410510153
+...Time to fetch 0 posts: 3
+...Terminating since reached max: 1/97
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js datasci-002 6000
+......pg_id: 1,  max_ver: 1
+Resuming Download of Last Update with Ver: 1 ...
+Local last updated time is: 1410510153
+Starting with list ID: 1 & page version: 1
+...Trying to read list file: ../datasci-002/lists/1.1.json
+......Max. pages to read: 97
+......Num. of posts in page: 25
+...Resume from last update DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410510153
+...Time to fetch 0 posts: 5
+...Trying to read list file: ../datasci-002/lists/1.2.json
+
+fs.js:427
+  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
+                 ^
+Error: ENOENT, no such file or directory '../datasci-002/lists/1.2.json'
+    at Object.fs.openSync (fs.js:427:18)
+    at Object.fs.readFileSync (fs.js:284:15)
+    at get_posts_list (/Users/appanponnappan/Y2014-Work/dataprod_prj/src/coursera_dl_runver1.js:222:31)
+    at get_updates_from (/Users/appanponnappan/Y2014-Work/dataprod_prj/src/coursera_dl_runver1.js:99:5)
+    at get_posts_list (/Users/appanponnappan/Y2014-Work/dataprod_prj/src/coursera_dl_runver1.js:279:17)
+    at get_updates_from (/Users/appanponnappan/Y2014-Work/dataprod_prj/src/coursera_dl_runver1.js:99:5)
+    at Object.<anonymous> (/Users/appanponnappan/Y2014-Work/dataprod_prj/src/coursera_dl_runver1.js:371:13)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js datasci-002 6000
+......pg_id: 1,  max_ver: 1
+Resuming Download of Last Update with Ver: 1 ...
+Local last updated time is: 1410510153
+Starting with list ID: 1 & page version: 1
+...Trying to read list file: ../datasci-002/lists/1.1.json
+......Max. pages to read: 97
+......Num. of posts in page: 25
+...Resume from last update DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1410510153
+...Time to fetch 0 posts: 3
+Fetching posts page: 1
+Current last updated time of 1st post: 1412078657
+Current last updated time of 25th post: 1410664508
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200333
+Fetching posts page: 2
+Current last updated time of 1st post: 1410641931
+Current last updated time of 25th post: 1410355854
+...Updates DL: urls array length: 13
+...Time to fetch 13 posts: 103968
+Fetching posts page: 3
+Current last updated time of 1st post: 1410326782
+Current last updated time of 25th post: 1410115442
+...Updates DL: urls array length: 0
+...Updated everything - Ending
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js biostats2-004 6000
+......pg_id: 2,  max_ver: 0
+Resuming Download of 1st Time from page_id: 2 ...
+Starting with list ID: 2 & page version: 0
+...Trying to read list file: ../biostats2-004/lists/2.json
+......Max. pages to read: 2
+......Num. of posts in page: 3
+...Resume from very 1st DL: urls array length: 0
+...Fetched everything - nothing left to resume
+......There could be some updates - checking ...
+Local last updated time is: 1408188088
+...Time to fetch 0 posts: 2
+Fetching posts page: 1
+Current last updated time of 1st post: 1411620132
+Current last updated time of 25th post: 1409165939
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198066
+Fetching posts page: 2
+Current last updated time of 1st post: 1409146307
+Current last updated time of 25th post: 1407790588
+...Updates DL: urls array length: 15
+...Time to fetch 15 posts: 119409
+Fetching posts page: 3
+Current last updated time of 1st post: 1407785507
+Current last updated time of 25th post: 1407292264
+...Updates DL: urls array length: 0
+...Updated everything - Ending
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js mmds-001 6000
+Downloading for 1st Time ...
+Starting with list ID: 1 & page version: 0
+Fetching posts page: 1
+Current last updated time of 1st post: 1412080532
+Current last updated time of 25th post: 1412058632
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201764
+Fetching posts page: 2
+Current last updated time of 1st post: 1412058440
+Current last updated time of 25th post: 1412025830
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198931
+Fetching posts page: 3
+Current last updated time of 1st post: 1412022864
+Current last updated time of 25th post: 1412001154
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 208118
+Fetching posts page: 4
+Current last updated time of 1st post: 1412000538
+Current last updated time of 25th post: 1411897807
+...Updates DL: urls array length: 10
+...Error fetching post id: 20, Error is: Error: connect ETIMEDOUT
+(py34) APsMBPro:src appanponnappan$ rm -rf  ~/temp/biostats2-004/
+(py34) APsMBPro:src appanponnappan$ cp -R ../mmds-001 ~/temp
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js mmds-001 6000
+......pg_id: 4,  max_ver: 0
+Resuming Download of 1st Time from page_id: 4 ...
+Starting with list ID: 4 & page version: 0
+...Trying to read list file: ../mmds-001/lists/4.json
+......Max. pages to read: 4
+......Num. of posts in page: 10
+...Resume from very 1st DL: urls array length: 5
+...Trying to read post file: ../mmds-001/posts/9.json
+...Resuming from post id: https://class.coursera.org/mmds-001/forum/thread?thread_id=20
+...Time to fetch 5 posts: 33319
+...Terminating since reached max: 5/4
+

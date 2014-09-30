@@ -10,7 +10,6 @@ var zlib = require('zlib');
 //User-Agent = Mozilla / 5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
 //csrf_token & CAUTH tokens have to be set manually
 //var cookie = 'csrf_token=FILL UP YOUR TOKEN; CAUTH=FILL UP YOUR TOKEN';
-
 var default_headers = {
   'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:7.0.1) Gecko/20100101 Firefox/31.0',
   'Accept': '*/*',
@@ -28,7 +27,8 @@ if (process.argv.length < 4) {
         process.exit(1);
 }
 var class_name = process.argv[2];
-var api_pg_url = 'https://class.coursera.org/'+class_name+'/api/forum/forums/0/threads?sort=lastupdated&page_size=25';
+var api_pg_url = 'https://class.coursera.org/'+class_name+
+        '/api/forum/forums/0/threads?sort=lastupdated&page_size=25';
 var api_post_url_pfx = 'https://class.coursera.org/'+class_name+'/api/forum/threads/';
 var delay = process.argv[3]; //7 sec delay between requests
 var other_opts = '';
@@ -46,8 +46,8 @@ String.prototype.endsWith = function(suffix) {
 function get_list_ids() {
     var list_files = fs.readdirSync(class_lists_dir);
     var max_ver = 0;
-    var new_id = 0, new_id_2 = 0;
-    var curr_file_ts = 0;
+    var max_id = 0;
+    //var curr_file_ts = 0;
     for(var i=0;i < list_files.length;i++) {
       if (list_files[i].endsWith('.json')) {
         arr = list_files[i].split('.');
@@ -57,36 +57,44 @@ function get_list_ids() {
         //    curr_file_ts = f_stat['ctime'].valueOf();
         //    new_id = list_files[i];
         //}
-        if (arr.length == 2 && (Number(arr[0]) > new_id) )
-            new_id = Number(arr[0]);
-        if ( arr.length > 2 ) {
-            if (Number(arr[1]) > max_ver)
-                max_ver = Number(arr[1]);
-            if (Number(arr[0]) > new_id_2)
-                new_id_2 = Number(arr[0]);
+        if (arr.length == 2 && max_ver == 0) {
+            if (max_id < Number(arr[0]) )
+                max_id = Number(arr[0]);
         }
-        //console.log("...file:"+list_files[i]+" has ts: "+curr_file_ts);
+        else {
+            if ( arr.length > 2 ) {
+                var curr_id = Number(arr[0]);
+                var curr_ver = Number(arr[1]);
+                if (curr_ver > max_ver) {
+                    max_ver = curr_ver;
+                    max_id = curr_id;
+                }
+                else {
+                    if (curr_ver == max_ver && curr_id > max_id)
+                        curr_id = max_id;
+                }
+            }
+        }
       }
     }
-    var pg_id = (new_id_2 != 0) ? new_id_2 : new_id;
-    console.log("......pg_id: " + pg_id + ",  max_ver: " + max_ver);
-    return [pg_id,max_ver];
+    console.log("......pg_id: " + max_id + ",  max_ver: " + max_ver);
+    return [max_id,max_ver];
 }
 
-function get_updates_from(page_id,max_pg_ver) {
+function get_updates_from(page_id,max_pg_ver,dl_state) {
     if (typeof get_updates_from.last_update_time == 'undefined') {
         var file = '';
         if (max_pg_ver == 0)
-            file = class_lists_dir+'/'+page_id+'.json';
+            file = class_lists_dir+'/1.json';
         else
-            file = class_lists_dir+'/'+page_id+'.'+max_pg_ver+'.json';
+            file = class_lists_dir+'/1.'+max_pg_ver+'.json';
         var data = fs.readFileSync(file);
         var lst_json_obj = JSON.parse(data);
         get_updates_from.last_update_time = lst_json_obj['threads'][0]['last_updated_time'];
     }
-    //Now filter on posts which re newer than last_updated_time
+    //Now filter on posts which are newer than last_updated_time
     console.log("Local last updated time is: "+get_updates_from.last_update_time);
-    get_posts_list(delay,page_id,max_pg_ver,get_updates_from.last_update_time);
+    get_posts_list(delay,page_id,max_pg_ver,dl_state,get_updates_from.last_update_time);
 }
 
 function get_posts_in(urls,delay) {
@@ -139,7 +147,11 @@ function get_posts_in(urls,delay) {
 // Function to get the URL of a page of forum posts
 // url is just a string of an existing URL of a posts page
 // Returns the loist of URLs of the posts in the page
-function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
+// NOTE:
+// This function expects delay param mandatorily.
+// If pg_id is present, max_pg_ver should also be sent but can be zero.
+// Or, all 4 params must be present
+function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
   function stop_fetching() {
     if ( get_posts_list.last_update_time == 0 ) {
         if (get_posts_list.page_id <= get_posts_list.max_page_id)
@@ -169,29 +181,35 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
         get_posts_list.last_update_time = last_update_time;
     else
         get_posts_list.last_update_time = 0;
-    console.log('Starting with list ID: '+get_posts_list.page_id+' & page version: '+get_posts_list.max_pg_ver);
+    console.log('Starting with list ID: '+get_posts_list.page_id+
+                ' & page version: '+get_posts_list.max_pg_ver);
 	}
   else {
     console.log("...Time to fetch "+get_posts_list.fetched_posts+" posts: "
                 + (Date.now() - get_posts_list.timestamp));
     get_posts_list.timestamp = Date.now();
+    get_posts_list.found_non_updated = false;
   	if (typeof pg_id == 'undefined')
             get_posts_list.page_id += 1;
     else
             get_posts_list.page_id = pg_id;
-    if ( typeof last_update_time != 'undefined' )
+    if ( typeof last_update_time != 'undefined' ) {
         get_posts_list.last_update_time = last_update_time;
+		get_posts_list.max_pg_ver += 1;
+    }
   }
 
   var op_file ='';
   if (get_posts_list.last_update_time != 0)
-        op_file = class_lists_dir+'/'+get_posts_list.page_id+'.'+(get_posts_list.max_pg_ver+1)+'.json';
+        op_file = class_lists_dir+'/'+get_posts_list.page_id+
+                    '.'+get_posts_list.max_pg_ver+'.json';
   else
         op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
   //if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
   if ( !stop_fetching() ) {
    var urls = [];
-   if (typeof pg_id != 'undefined' && typeof last_update_time == 'undefined') {
+   // Check if we need to resume & setup the resumption point
+   if (typeof dl_state != 'undefined' && dl_state == 'resume') {
         var json_file = '';
         if (get_posts_list.max_pg_ver == 0)
             json_file = class_lists_dir+'/'+pg_id+'.json';
@@ -261,6 +279,7 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
                 get_posts_list(delay);
         }
    }
+   // Get the posts page & see if we reached the end of updates from timestamp 
    else {
    	request({
   		url: api_pg_url+'&page='+get_posts_list.page_id,
@@ -324,7 +343,8 @@ function get_posts_list(delay, pg_id, max_pg_ver, last_update_time) {
        }
   }
   else {
-      console.log("...Terminating since reached max: "+get_posts_list.page_id+"/"+get_posts_list.max_page_id);
+      console.log("...Terminating since reached max: "+get_posts_list.page_id+
+                  "/"+get_posts_list.max_page_id);
   }
 }
 
@@ -335,15 +355,20 @@ try {
     fs.mkdirSync(class_dir);
     fs.mkdirSync(class_posts_dir);
     fs.mkdirSync(class_lists_dir);
+    console.log("Downloading for 1st Time ...");
     get_posts_list(delay);
   } catch(e) {
     if ( e.code == 'EEXIST' ) {
         var max_ids = get_list_ids();
-        if (max_ids[0] == 0)
-            get_posts_list(delay);
-        else
-            get_posts_list(delay,max_ids[0],max_ids[1]);
+        if (max_ids[1] == 0) {
+            console.log("Resuming Download of 1st Time from page_id: "+max_ids[0]+" ...");
+            get_posts_list(delay,max_ids[0],max_ids[1],'resume');
         }
+        else {
+            console.log("Resuming Download of Last Update with Ver: "+max_ids[1]+" ...");
+            get_updates_from(max_ids[0],max_ids[1],'resume');
+        }
+    }
     else throw e;
   }
 

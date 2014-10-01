@@ -82,6 +82,8 @@ function get_list_ids() {
 }
 
 function get_updates_from(page_id,max_pg_ver,dl_state) {
+    if (typeof get_updates_from.count == 'undefined')
+        get_updates_from.count = 1;
     if (typeof get_updates_from.last_update_time == 'undefined') {
         var file = '';
         if (max_pg_ver == 0)
@@ -94,7 +96,12 @@ function get_updates_from(page_id,max_pg_ver,dl_state) {
     }
     //Now filter on posts which are newer than last_updated_time
     console.log("Local last updated time is: "+get_updates_from.last_update_time);
-    get_posts_list(delay,page_id,max_pg_ver,dl_state,get_updates_from.last_update_time);
+    if (get_updates_from.count < 3) {
+        get_updates_from.count += 1
+        get_posts_list(delay,page_id,max_pg_ver,dl_state,get_updates_from.last_update_time);
+    }
+    else
+        console.log("...Terminating since reached max. update count: 2");
 }
 
 function get_posts_in(urls,delay) {
@@ -343,8 +350,9 @@ function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
        }
   }
   else {
-      console.log("...Terminating since reached max: "+get_posts_list.page_id+
+      console.log("...Reached end-of page list: "+get_posts_list.page_id+
                   "/"+get_posts_list.max_page_id);
+      get_updates_from(1,get_posts_list.max_pg_ver);
   }
 }
 

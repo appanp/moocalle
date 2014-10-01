@@ -84,16 +84,22 @@ function get_list_ids() {
 function get_updates_from(page_id,max_pg_ver,dl_state) {
     if (typeof get_updates_from.count == 'undefined')
         get_updates_from.count = 1;
-    if (typeof get_updates_from.last_update_time == 'undefined') {
-        var file = '';
+    var file = '';
+    if (typeof dl_state != 'undefined' && dl_state == 'resume') {
+        if ((max_pg_ver-1) == 0)
+            file = class_lists_dir+'/1.json';
+        else
+            file = class_lists_dir+'/1.'+(max_pg_ver-1)+'.json';
+    }
+    else {
         if (max_pg_ver == 0)
             file = class_lists_dir+'/1.json';
         else
             file = class_lists_dir+'/1.'+max_pg_ver+'.json';
-        var data = fs.readFileSync(file);
-        var lst_json_obj = JSON.parse(data);
-        get_updates_from.last_update_time = lst_json_obj['threads'][0]['last_updated_time'];
     }
+    var data = fs.readFileSync(file);
+    var lst_json_obj = JSON.parse(data);
+    get_updates_from.last_update_time = lst_json_obj['threads'][0]['last_updated_time'];
     //Now filter on posts which are newer than last_updated_time
     console.log("Local last updated time is: "+get_updates_from.last_update_time);
     if (get_updates_from.count < 3) {
@@ -260,21 +266,28 @@ function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
             urls_last = urls[urls.length - 1];
             post_id = urls_last.substr(urls_last.lastIndexOf('=')+1);
             file = class_posts_dir+'/'+post_id+'.json';
-            console.log("...Trying to read post file: "+file);
-            try {
-                var data = fs.readFileSync(file);
-                console.log("...Nothing left to resume, but new posts found ...");
-                urls = [];
-                if (other_opts != 'lists-only')
-                    get_updates_from(1,get_posts_list.max_pg_ver);
-                else
-                    get_posts_list(delay);
-            } catch(e) {
-                if ( e.code == 'ENOENT' ) {
-                    console.log("...Resuming from post id: "+urls[0]);
-                    get_posts_in(urls,delay);
+            if (typeof dl_state == 'undefined') {
+                console.log("...Trying to read post file: "+file);
+                try {
+                    var data = fs.readFileSync(file);
+                    console.log("...Nothing left to resume, but new posts found ...");
+                    urls = [];
+                    if (other_opts != 'lists-only')
+                        get_updates_from(1,get_posts_list.max_pg_ver);
+                    else
+                        get_posts_list(delay);
+                } catch(e) {
+                    if ( e.code == 'ENOENT' ) {
+                        console.log("...Resuming from post id: "+urls[0]);
+                        get_posts_in(urls,delay);
+                    }
+                    else throw e;
                 }
-                else throw e;
+            }
+            // This is resumption of update, can not just look for file existence
+            else {
+                console.log("...Resuming from post id: "+urls[0]);
+                get_posts_in(urls,delay);
             }
         }
         else {

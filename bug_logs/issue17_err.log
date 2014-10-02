@@ -1,0 +1,399 @@
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js statistics-002 6000
+......pg_id: 12,  max_ver: 0
+Resuming Download of 1st Time from page_id: 12 ...
+Starting with list ID: 12 & page version: 0
+...Trying to read list file: ../statistics-002/lists/12.json
+......Max. pages to read: 16
+......Num. of posts in page: 25
+...Resume from very 1st DL: urls array length: 15
+...Trying to read post file: ../statistics-002/posts/186.json
+...Resuming from post id: https://class.coursera.org/statistics-002/forum/thread?thread_id=151
+...Time to fetch 15 posts: 113232
+Fetching posts page: 13
+Current last updated time of 1st post: 1411445375
+Current last updated time of 25th post: 1411414749
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199554
+Fetching posts page: 14
+Current last updated time of 1st post: 1411413555
+Current last updated time of 25th post: 1411391349
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199353
+Fetching posts page: 15
+Current last updated time of 1st post: 1411390934
+Current last updated time of 25th post: 1411358175
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200099
+Fetching posts page: 16
+Current last updated time of 1st post: 1411355212
+Current last updated time of 25th post: 1411333686
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201464
+Fetching posts page: 17
+Current last updated time of 1st post: 1411332938
+Current last updated time of 25th post: 1411313636
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 202248
+Fetching posts page: 18
+Current last updated time of 1st post: 1411312211
+Current last updated time of 25th post: 1411245219
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200456
+Fetching posts page: 19
+Current last updated time of 1st post: 1411244902
+Current last updated time of 25th post: 1411223201
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201978
+Fetching posts page: 20
+Current last updated time of 1st post: 1411221575
+Current last updated time of 25th post: 1411157365
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201388
+Fetching posts page: 21
+Current last updated time of 1st post: 1411153889
+Current last updated time of 25th post: 1411119635
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199186
+Fetching posts page: 22
+Current last updated time of 1st post: 1411117308
+Current last updated time of 25th post: 1411077490
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200968
+Fetching posts page: 23
+Current last updated time of 1st post: 1411069660
+Current last updated time of 25th post: 1411020151
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199072
+Fetching posts page: 24
+Current last updated time of 1st post: 1411018377
+Current last updated time of 25th post: 1410966558
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199158
+Fetching posts page: 25
+Current last updated time of 1st post: 1410965037
+Current last updated time of 25th post: 1410915612
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199135
+Fetching posts page: 26
+Current last updated time of 1st post: 1410915103
+Current last updated time of 25th post: 1410840793
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 202210
+Fetching posts page: 27
+Current last updated time of 1st post: 1410840763
+Current last updated time of 25th post: 1410804717
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199599
+Fetching posts page: 28
+Current last updated time of 1st post: 1410803586
+Current last updated time of 25th post: 1410786768
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200038
+Fetching posts page: 29
+Current last updated time of 1st post: 1410786543
+Current last updated time of 25th post: 1410743391
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198784
+Fetching posts page: 30
+Current last updated time of 1st post: 1410741876
+Current last updated time of 25th post: 1410708723
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200411
+Fetching posts page: 31
+Current last updated time of 1st post: 1410706880
+Current last updated time of 25th post: 1410643589
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199936
+Fetching posts page: 32
+Current last updated time of 1st post: 1410643008
+Current last updated time of 25th post: 1410603323
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201676
+Fetching posts page: 33
+Current last updated time of 1st post: 1410599921
+Current last updated time of 25th post: 1410536525
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200577
+Fetching posts page: 34
+Current last updated time of 1st post: 1410536368
+Current last updated time of 25th post: 1410463669
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198928
+Fetching posts page: 35
+Current last updated time of 1st post: 1410463669
+Current last updated time of 25th post: 1410394415
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199681
+Fetching posts page: 36
+Current last updated time of 1st post: 1410393229
+Current last updated time of 25th post: 1410352516
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200256
+Fetching posts page: 37
+Current last updated time of 1st post: 1410350465
+Current last updated time of 25th post: 1410307393
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199919
+Fetching posts page: 38
+Current last updated time of 1st post: 1410302692
+Current last updated time of 25th post: 1410226481
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199199
+Fetching posts page: 39
+Current last updated time of 1st post: 1410224492
+Current last updated time of 25th post: 1410184892
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199847
+Fetching posts page: 40
+Current last updated time of 1st post: 1410184522
+Current last updated time of 25th post: 1410116655
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198291
+Fetching posts page: 41
+Current last updated time of 1st post: 1410111224
+Current last updated time of 25th post: 1410029206
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198969
+Fetching posts page: 42
+Current last updated time of 1st post: 1410023297
+Current last updated time of 25th post: 1409932273
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199377
+Fetching posts page: 43
+Current last updated time of 1st post: 1409932114
+Current last updated time of 25th post: 1409860428
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200952
+Fetching posts page: 44
+Current last updated time of 1st post: 1409860396
+Current last updated time of 25th post: 1409752325
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 205662
+Fetching posts page: 45
+Current last updated time of 1st post: 1409751917
+Current last updated time of 25th post: 1409592127
+...Updates DL: urls array length: 23
+...Ignoring post id: 15 'coz of zero length
+...Time to fetch 23 posts: 189473
+...Terminating since reached max: 46/45
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js statistics-002 6000
+......pg_id: 45,  max_ver: 0
+Resuming Download of 1st Time from page_id: 45 ...
+Starting with list ID: 45 & page version: 0
+...Trying to read list file: ../statistics-002/lists/45.json
+......Max. pages to read: 45
+......Num. of posts in page: 23
+...Resume from very 1st DL: urls array length: 1
+...Trying to read post file: ../statistics-002/posts/15.json
+...Resuming from post id: https://class.coursera.org/statistics-002/forum/thread?thread_id=15
+...Ignoring post id: 15 'coz of zero length
+...Time to fetch 1 posts: 2637
+...Terminating since reached max: 46/45
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js statistics-002 6000
+......pg_id: 45,  max_ver: 0
+Resuming Download of 1st Time from page_id: 45 ...
+Starting with list ID: 45 & page version: 0
+...Trying to read list file: ../statistics-002/lists/45.json
+......Max. pages to read: 45
+......Num. of posts in page: 23
+...Resume from very 1st DL: urls array length: 1
+...Trying to read post file: ../statistics-002/posts/15.json
+...Resuming from post id: https://class.coursera.org/statistics-002/forum/thread?thread_id=15
+...Ignoring post id: 15 'coz of zero length
+...Time to fetch 1 posts: 2513
+...Terminating since reached max: 46/45
+(py34) APsMBPro:src appanponnappan$ node coursera_dl_runver1.js statistics-002 6000
+......pg_id: 45,  max_ver: 0
+Resuming Download of 1st Time from page_id: 45 ...
+Starting with list ID: 45 & page version: 0
+...Trying to read list file: ../statistics-002/lists/45.json
+......Max. pages to read: 45
+......Num. of posts in page: 23
+...Resume from very 1st DL: urls array length: 1
+...Trying to read post file: ../statistics-002/posts/15.json
+...Resuming from post id: https://class.coursera.org/statistics-002/forum/thread?thread_id=15
+...Ignoring post id: 15 'coz of zero length
+...Time to fetch 1 posts: 2117
+...Reached end-of page list: 46/45
+Local last updated time is: 1410424652
+...Time to fetch 1 posts: 22
+Fetching posts page: 1
+Current last updated time of 1st post: 1412130174
+Current last updated time of 25th post: 1412112753
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198782
+Fetching posts page: 2
+Current last updated time of 1st post: 1412112552
+Current last updated time of 25th post: 1412061705
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 207034
+Fetching posts page: 3
+Current last updated time of 1st post: 1412057078
+Current last updated time of 25th post: 1412008774
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201312
+Fetching posts page: 4
+Current last updated time of 1st post: 1412007028
+Current last updated time of 25th post: 1411948453
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198873
+Fetching posts page: 5
+Current last updated time of 1st post: 1411948205
+Current last updated time of 25th post: 1411843810
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 206071
+Fetching posts page: 6
+Current last updated time of 1st post: 1411834792
+Current last updated time of 25th post: 1411748436
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201645
+Fetching posts page: 7
+Current last updated time of 1st post: 1411744232
+Current last updated time of 25th post: 1411684636
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 202140
+Fetching posts page: 8
+Current last updated time of 1st post: 1411681228
+Current last updated time of 25th post: 1411657294
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200378
+Fetching posts page: 9
+Current last updated time of 1st post: 1411655385
+Current last updated time of 25th post: 1411596227
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199026
+Fetching posts page: 10
+Current last updated time of 1st post: 1411594408
+Current last updated time of 25th post: 1411563597
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199491
+Fetching posts page: 11
+Current last updated time of 1st post: 1411562051
+Current last updated time of 25th post: 1411504741
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 202756
+Fetching posts page: 12
+Current last updated time of 1st post: 1411503942
+Current last updated time of 25th post: 1411471013
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200419
+Fetching posts page: 13
+Current last updated time of 1st post: 1411470832
+Current last updated time of 25th post: 1411420842
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201088
+Fetching posts page: 14
+Current last updated time of 1st post: 1411420276
+Current last updated time of 25th post: 1411399132
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198787
+Fetching posts page: 15
+Current last updated time of 1st post: 1411396336
+Current last updated time of 25th post: 1411373439
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199177
+Fetching posts page: 16
+Current last updated time of 1st post: 1411373374
+Current last updated time of 25th post: 1411337725
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200226
+Fetching posts page: 17
+Current last updated time of 1st post: 1411337062
+Current last updated time of 25th post: 1411318457
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199277
+Fetching posts page: 18
+Current last updated time of 1st post: 1411318406
+Current last updated time of 25th post: 1411263193
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199218
+Fetching posts page: 19
+Current last updated time of 1st post: 1411262339
+Current last updated time of 25th post: 1411231792
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200112
+Fetching posts page: 20
+Current last updated time of 1st post: 1411231041
+Current last updated time of 25th post: 1411173594
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200929
+Fetching posts page: 21
+Current last updated time of 1st post: 1411171070
+Current last updated time of 25th post: 1411131588
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199969
+Fetching posts page: 22
+Current last updated time of 1st post: 1411131136
+Current last updated time of 25th post: 1411085311
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199320
+Fetching posts page: 23
+Current last updated time of 1st post: 1411084781
+Current last updated time of 25th post: 1411046206
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199417
+Fetching posts page: 24
+Current last updated time of 1st post: 1411045715
+Current last updated time of 25th post: 1410974062
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200999
+Fetching posts page: 25
+Current last updated time of 1st post: 1410973542
+Current last updated time of 25th post: 1410936022
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198389
+Fetching posts page: 26
+Current last updated time of 1st post: 1410932362
+Current last updated time of 25th post: 1410862459
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198689
+Fetching posts page: 27
+Current last updated time of 1st post: 1410862273
+Current last updated time of 25th post: 1410814550
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 204880
+Fetching posts page: 28
+Current last updated time of 1st post: 1410812100
+Current last updated time of 25th post: 1410792918
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199650
+Fetching posts page: 29
+Current last updated time of 1st post: 1410792520
+Current last updated time of 25th post: 1410753883
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199562
+Fetching posts page: 30
+Current last updated time of 1st post: 1410751550
+Current last updated time of 25th post: 1410713901
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 212409
+Fetching posts page: 31
+Current last updated time of 1st post: 1410713173
+Current last updated time of 25th post: 1410653985
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 200012
+Fetching posts page: 32
+Current last updated time of 1st post: 1410653568
+Current last updated time of 25th post: 1410612590
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 198548
+Fetching posts page: 33
+Current last updated time of 1st post: 1410610443
+Current last updated time of 25th post: 1410555811
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 201514
+Fetching posts page: 34
+Current last updated time of 1st post: 1410554721
+Current last updated time of 25th post: 1410472924
+...Updates DL: urls array length: 25
+...Time to fetch 25 posts: 199026
+Fetching posts page: 35
+Current last updated time of 1st post: 1410471517
+Current last updated time of 25th post: 1410413438
+...Updates DL: urls array length: 21
+...Time to fetch 21 posts: 170360
+Fetching posts page: 36
+Current last updated time of 1st post: 1410409968
+Current last updated time of 25th post: 1410361154
+...Updates DL: urls array length: 0
+...Updated everything - Ending

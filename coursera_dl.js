@@ -71,7 +71,7 @@ function get_list_ids() {
                 }
                 else {
                     if (curr_ver == max_ver && curr_id > max_id)
-                        curr_id = max_id;
+                        max_id = curr_id;
                 }
             }
         }
@@ -386,7 +386,7 @@ try {
             get_posts_list(delay,max_ids[0],max_ids[1],'resume');
         }
         else {
-            console.log("Resuming Download of Last Update with Ver: "+max_ids[1]+" ...");
+            console.log("Resuming Download of Last Update with Ver: "+max_ids[1]+"& page id: "+max_ids[0]+" ...");
             get_updates_from(max_ids[0],max_ids[1],'resume');
         }
     }

@@ -10,8 +10,6 @@ var zlib = require('zlib');
 //User-Agent = Mozilla / 5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
 //csrf_token & CAUTH tokens have to be set manually
 //var cookie = 'csrf_token=FILL UP YOUR TOKEN; CAUTH=FILL UP YOUR TOKEN';
-//var cookie = 'csrf_token=QaFt74PkOwmcbdirGsYQ; CAUTH=47vIBdHSWqivfqW1dOPTO5LTLMXOJroI0Ex7jeUKLoqT8dSuD5CDJb2dCl8vjEhTGK3CtJiLx4vgjAu54dWoFQ.iM4cEShDZRNpsVifQS5vbg.-EaLD0HGsLWbtYSpC6NwqoB3JG1dknR6nX-zBRMQWB34g2bw9CduSRZse9zSmTRlcfeiAZAx3fE19dB2bFsDZg5tTJkKPXZ6xe9HG4M_naz4CKhaZYOrps7JAU7uGZTxdQBz3AJkMuQKqR31Ar8vcF1bZfp-6q6VKA4_nx178hE';
-var cookie = 'csrf_token=ZpWBmKFGN3Dh23jMq9n6; CAUTH=snIhOCYHwjjZXZbGHlQ0_29e6ckoRDQ9CqVDGTnpKXSz9CUAnbjAd7yqgjwQ16zQbyZhRHY2OKX3zYNAAs8hNQ.9UIX8_QsJ9d5NxAoOhFfsA.5BD02gRt_Ktef-lEPffa_1AjVT1B9K9_9Y6f0MTGcpjYJ-WHuQ1RRB8Fwsb_0F2NpiHF3z7D3UVcus8LkA42dc4At6fIvwfmlw_cU8OW7FWaUtQtdPjn849RvCDUuEeqdiF74q9G4lsJz-7i-udZ3LWNIIdPoZFPUSaPyy5ws5U';
 var default_headers = {
   'User-Agent': 'Mozilla/5.0 (X11; Linux i686; rv:7.0.1) Gecko/20100101 Firefox/31.0',
   'Accept': '*/*',

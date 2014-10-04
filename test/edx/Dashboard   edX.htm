@@ -1,0 +1,4962 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 lte9 lte8 lte7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      <title>
+       Dashboard | edX
+      </title>
+  
+
+  <script type="text/javascript">
+    /* immediately break out of an iframe if coming from the marketing website */
+    (function(window) {
+      if (window.location !== window.top.location) {
+        window.top.location = window.location;
+      }
+    })(this);
+  </script>
+
+  <script type="text/javascript" src="/jsi18n/"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://d37djvu3ytnwxt.cloudfront.net/static/images/favicon.c074c912999f.ico" />
+
+  
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-vendor.a551063e5c64.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-app.909d4d25b989.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-app-extend1.b8681a54e3da.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+    <link href="https://d37djvu3ytnwxt.cloudfront.net/static/css/lms-style-app-extend2.69889a176949.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-main_vendor.8f61830dc3b7.js" charset="utf-8"></script>
+
+
+
+  
+
+
+  
+  
+
+
+  <!--[if lt IE 9]>
+    <script src="https://d37djvu3ytnwxt.cloudfront.net/static/js/html5shiv.d5e37d8ee1a4.js"></script>
+  <![endif]-->
+
+  <script src=//cdn.optimizely.com/js/1743970571.js></script>
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+  
+
+
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script></head>
+
+<body class="view-dashboard is-authenticated lang_en">
+  <a class="nav-skip" href="#my-courses">Skip to this view's content</a>
+
+  
+<!--[if IE]>
+<div class="sr message-accessibility message" id="mathjax-accessibility-message" aria-hidden="true">
+	<p class="copy">This page features MathJax technology to render mathematical formulae. To make math accessibile, we suggest using the MathPlayer plugin. Please visit the <a href="//www.dessci.com/en/products/mathplayer/download.htm">MathPlayer Download Page</a> to download the plugin for your browser.</p>
+</div>
+<div class="sr message-accessibility message" id="mathplayer-browser-message" aria-hidden="true">
+	<p class="copy">
+	 Your browser does not support the MathPlayer plugin. To use MathPlayer, please use Internet Explorer 6 through 9.
+	 </p>
+</div>
+<![endif]-->
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <header class="global " aria-label="Global Navigation">
+    <nav>
+    <h1 class="logo">
+      <a href="https://www.edx.org">
+        
+            <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/logo-edX-77x36.png" alt="edX"/>
+        
+      </a>
+    </h1>
+
+
+    <ol class="left nav-global authenticated">
+      
+          <li class="nav-global-01">
+            <a href="https://www.edx.org/courses/allschools/allsubjects/allcourses">Find Courses</a>
+          </li>
+      
+    </ol>
+    <ol class="user">
+      <li class="primary">
+        <a href="/dashboard" class="user-link">
+          <span class="avatar"></span>
+          <span class="sr">Dashboard for: </span> AppanPonnappan
+        </a>
+      </li>
+      <li class="primary">
+        <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">More options dropdown</span> &#9662;</a>
+        <ul class="dropdown-menu" aria-label="More Options" role="menu">
+          
+              <li><a href="https://www.edx.org/student-faq">Help</a></li>
+          
+          <li><a href="/logout" role="menuitem">Log Out</a></li>
+        </ul>
+      </li>
+    </ol>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">Help</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="edX Help">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal "tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+	<span class="edx">edX</span> Help
+      </h2>
+      <hr>
+    </header>
+
+
+
+
+    <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" target="_blank">FAQ</a>.
+      </p>
+
+    <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+    <hr>
+
+    <div class="help-buttons">
+      <a href="#" id="feedback_link_problem">Report a problem</a>
+      <a href="#" id="feedback_link_suggestion">Make a suggestion</a>
+      <a href="#" id="feedback_link_question">Ask a question</a>
+    </div>
+
+    <p class="note">Please note: The edX support team is English speaking. While we will do our best to address your inquiry in any language, our responses will be in English.</p>
+
+  </div>
+
+  <div class="inner-wrapper" id="feedback_form_wrapper">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header></header>
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+      <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+      <input name="subject" type="text" id="feedback_form_subject" aria-required="true">
+      <label data-field="details" for="feedback_form_details">Tell us the details*
+<span class="tip">Include error messages, steps which lead to the issue, etc</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+      <div class="submit">
+        <input name="submit" type="submit" value="Submit" id="feedback_submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>Thank You!</h2>
+      <hr>
+    </header>
+
+    
+    <p>
+    Thank you for your inquiry or feedback.  We typically respond to a request within one business day (Monday to Friday, 13:00 UTC to 21:00 UTC.) In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="feedback-faq-link" tabindex="0">detailed FAQs</a> where most questions have already been answered.
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $(".help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    showFeedback = function(event, issue_type, title, subject_label, details_label) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_form input[name='issue_type']").val(issue_type);
+        $("#feedback_form_wrapper").css("display", "block");
+        $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+        $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+        $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+        $("#feedback_form_wrapper .close-modal").focus();
+        event.preventDefault();
+    };
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#feedback_form_wrapper .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_link_problem").click(function(event) {
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem" + "*",
+            "Details of the problem you are encountering" + "*" + "<span class='tip'>" +
+              "Include error messages, steps which lead to the issue, etc." + "</span>"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question" + "*",
+            "Details" + "*"
+        );
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#feedback_form_wrapper .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + _.template(
+              "Please {link_start}send us e-mail{link_end}.",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+
+
+  <div class="content-wrapper" id="content">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="container dashboard" id="dashboard-main" aria-hidden="false">
+
+
+
+  <section class="profile-sidebar">
+    <header class="profile">
+      <h1 class="user-name">AppanPonnappan</h1>
+    </header>
+    <section class="user-info">
+      <ul>
+        <li class="info--username">
+          <span class="title">Full Name (<a href="#apply_name_change" rel="leanModal" class="edit-name">edit</a>)</span> <span class="data">Appan Ponnappan</span>
+        </li>
+        <li class="info--email">
+          <span class="title">Email
+            (<a href="#change_email" rel="leanModal" class="edit-email">edit</a>)
+          </span> <span class="data">appanponn@gmail.com</span>
+        </li>
+
+        
+
+
+
+<li class="status status-language">
+  <span class="title status-title">
+    Preferred Language
+    (<a href="#change_language" rel="leanModal" class="edit-language">edit</a>)
+  </span>
+  <span class="data">English</span>
+</li>
+
+
+        <li class="controls--account">
+          <span class="title">
+            Connected Accounts
+          </span>
+
+          <span class="data">
+            <span class="third-party-auth">
+
+            <div class="auth-provider">
+
+              <div class="status">
+                <i class="icon icon-unlink"></i><span class="copy">Not Linked</span>
+              </div>
+
+              <span class="provider">Facebook</span>
+              <span class="control">
+
+                  <a href="/auth/login/facebook/?auth_entry=dashboard">
+                    Link
+                  </a>
+              </form>
+
+              </span>
+            </div>
+            <div class="auth-provider">
+
+              <div class="status">
+                <i class="icon icon-unlink"></i><span class="copy">Not Linked</span>
+              </div>
+
+              <span class="provider">Google</span>
+              <span class="control">
+
+                  <a href="/auth/login/google-oauth2/?auth_entry=dashboard">
+                    Link
+                  </a>
+              </form>
+
+              </span>
+            </div>
+          </span>
+        </li>
+
+        <li class="controls--account">
+          <span class="title"><a href="#password_reset_complete" rel="leanModal" id="pwd_reset_button">Reset Password</a></span>
+          <form id="password_reset_form" method="post" data-remote="true" action="/password_reset/">
+            <input id="id_email" type="hidden" name="email" maxlength="75" value="appanponn@gmail.com" />
+            <!-- <input type="submit" id="pwd_reset_button" value="Reset Password" /> -->
+          </form>
+        </li>
+
+        
+
+
+
+
+
+
+
+
+
+
+        
+
+<!--TODO replace this with something a clever deisgn person approves of-->
+<!--TODO replace this with a shiny loopy thing to actually print out all courses-->
+
+
+
+      </ul>
+    </section>
+
+  </section>
+
+  <section class="my-courses" id="my-courses">
+    <header>
+      <h2>Current Courses</h2>
+    </header>
+
+      <ul class="listing-courses">
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/CS-184.1x/2013_October/info" class="cover">
+        <img src="/c4x/BerkeleyX/CS-184.1x/asset/images_course_image.jpg" alt="CS-184.1x Foundations of Computer Graphics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Nov 18, 2013
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/CS-184.1x/2013_October/info">CS-184.1x Foundations of Computer Graphics</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/CS-184.1x/2013_October/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/CS-184.1x/2013_October" data-course-number="CS-184.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/CS-184.1x/2013_October" data-course-number="CS-184.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/CS188.1x/2013_Spring/info" class="cover">
+        <img src="/static/CS188.1x/images/course_image.jpg" alt="CS188.1x Artificial Intelligence Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 17, 2013
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/CS188.1x/2013_Spring/info">CS188.1x Artificial Intelligence</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-processing is-shown">
+
+      <p class="message-copy">Final course details are being wrapped up at this time. Your final standing will be available shortly.</p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/CS188.1x/2013_Spring/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/CS188.1x/2013_Spring" data-course-number="CS188.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/CS_CS169.1x/1T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/CS_CS169.1x/asset/saas1-course_image.jpg" alt="CS_CS169.1x Engineering Software as a Service Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jun 12, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/CS_CS169.1x/1T2014/info">CS169.1x Engineering Software as a Service</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">1%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           75%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/CS_CS169.1x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/CS_CS169.1x/1T2014" data-course-number="CS_CS169.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/CS_CS169.1x/1T2014" data-course-number="CS_CS169.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/CS_CS169.2x/1T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/CS_CS169.2x/asset/saas2-course_image.jpg" alt="CS_CS169.2x Software as a Service, Part 2 Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 24, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/CS_CS169.2x/1T2014/info">CS_CS169.2x Software as a Service, Part 2</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           75%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/CS_CS169.2x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/CS_CS169.2x/1T2014" data-course-number="CS_CS169.2x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/CS_CS169.2x/1T2014" data-course-number="CS_CS169.2x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/GG101x/1T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/GG101x/asset/Smiley_Face_Buttons_Horiz_Crop_2.jpg" alt="GG101x The Science of Happiness Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 09, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/GG101x/1T2014/info">GG101x The Science of Happiness</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/BerkeleyX/GG101x/1T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/GG101x/1T2014" data-course-number="GG101x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/GG101x/1T2014" data-course-number="GG101x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/Stat_2.1x/1T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/Stat_2.1x/asset/images_course_image.jpg" alt="Stat_2.1x Introduction to Statistics: Descriptive Statistics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Mar 31, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/Stat_2.1x/1T2014/info">Stat2.1x Introduction to Statistics: Descriptive Statistics</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">71%</span>.
+      </p>
+
+  <ul class="actions">
+      <li class="action action-certificate">
+      <a class="btn" href="https://s3.amazonaws.com/verify.edx.org/downloads/1b868cf6f5c24bf58e471cf892dbcf28/Certificate.pdf"
+         title="This link will open/download a PDF document">
+         Download Your Certificate (PDF)</a></li>
+
+  </ul>
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/Stat_2.1x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/Stat_2.1x/1T2014" data-course-number="Stat_2.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/Stat_2.1x/1T2014" data-course-number="Stat_2.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/Stat_2.2x/1T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/Stat_2.2x/asset/images_course_image.jpg" alt="Stat_2.2x Introduction to Statistics: Probability Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jun 01, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/Stat_2.2x/1T2014/info">Stat_2.2x Introduction to Statistics: Probability</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/Stat_2.2x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/Stat_2.2x/1T2014" data-course-number="Stat_2.2x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/Stat_2.2x/1T2014" data-course-number="Stat_2.2x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/BerkeleyX/Stat_2.3x/2T2014/info" class="cover">
+        <img src="/c4x/BerkeleyX/Stat_2.3x/asset/images_course_image.jpg" alt="Stat_2.3x Introduction to Statistics: Inference Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 09, 2014
+        </p>
+        <h2 class="university">BerkeleyX</h2>
+        <h3>
+            <a href="/courses/BerkeleyX/Stat_2.3x/2T2014/info">Stat_2.3x Introduction to Statistics: Inference</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/BerkeleyX/Stat_2.3x/2T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="BerkeleyX/Stat_2.3x/2T2014" data-course-number="Stat_2.3x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="BerkeleyX/Stat_2.3x/2T2014" data-course-number="Stat_2.3x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/CaltechX/CS_1156x/3T2014/info" class="cover">
+        <img src="/c4x/CaltechX/CS_1156x/asset/images_course_image.jpg" alt="CS_1156x Learning From Data (introductory Machine Learning course) Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 24, 2014
+        </p>
+        <h2 class="university">CaltechX</h2>
+        <h3>
+            <a href="/courses/CaltechX/CS_1156x/3T2014/info">CS1156x Learning From Data (introductory Machine Learning course)</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/CaltechX/CS_1156x/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="CaltechX/CS_1156x/3T2014" data-course-number="CS_1156x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="CaltechX/CS_1156x/3T2014" data-course-number="CS_1156x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/CaltechX/Ec1011x/1T2014/info" class="cover">
+        <img src="/c4x/CaltechX/Ec1011x/asset/large-icon.png" alt="Ec1011x Principles of Economics with Calculus Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Mar 26, 2014
+        </p>
+        <h2 class="university">CaltechX</h2>
+        <h3>
+            <a href="/courses/CaltechX/Ec1011x/1T2014/info">Ec1011x Principles of Economics with Calculus</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           68%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/CaltechX/Ec1011x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="CaltechX/Ec1011x/1T2014" data-course-number="Ec1011x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="CaltechX/Ec1011x/1T2014" data-course-number="Ec1011x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/CornellX/INFO2040x/1T2014/info" class="cover">
+        <img src="/c4x/CornellX/INFO2040x/asset/MOOC001_NetworksIcon_Lockup4d.png" alt="INFO2040x Networks, Crowds, and Markets Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 10, 2014
+        </p>
+        <h2 class="university">CornellX</h2>
+        <h3>
+            <a href="/courses/CornellX/INFO2040x/1T2014/info">INFO2040x Networks, Crowds, and Markets</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">1%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           70%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/CornellX/INFO2040x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="CornellX/INFO2040x/1T2014" data-course-number="INFO2040x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="CornellX/INFO2040x/1T2014" data-course-number="INFO2040x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/DavidsonX/001x/1T2014/info" class="cover">
+        <img src="/c4x/DavidsonX/001x/asset/davidsonX_courseimage.jpg" alt="001x Medicinal Chemistry Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 06, 2014
+        </p>
+        <h2 class="university">DavidsonX</h2>
+        <h3>
+            <a href="/courses/DavidsonX/001x/1T2014/info">001x Medicinal Chemistry</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">90%</span>.
+      </p>
+
+  <ul class="actions">
+      <li class="action action-certificate">
+      <a class="btn" href="https://s3.amazonaws.com/verify.edx.org/downloads/481f3b959c5648949dd357855b70d046/Certificate.pdf"
+         title="This link will open/download a PDF document">
+         Download Your Certificate (PDF)</a></li>
+
+  </ul>
+</div>
+
+
+
+
+          <a href="/courses/DavidsonX/001x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="DavidsonX/001x/1T2014" data-course-number="001x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="DavidsonX/001x/1T2014" data-course-number="001x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/DelftX/DDA691x/asset/images_course_image.jpg" alt="DDA691x Delft Design Approach Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course has not yet started
+        </p>
+        <h2 class="university">DelftX</h2>
+        <h3>
+            <span>DDA691x Delft Design Approach</span>
+        </h3>
+      </hgroup>
+
+
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="DelftX/DDA691x/3T2014" data-course-number="DDA691x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="DelftX/DDA691x/3T2014" data-course-number="DDA691x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/DelftX/FP101x/asset/images_course_image.jpg" alt="FP101x Introduction to Functional Programming Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Starts - Oct 14, 2014
+        </p>
+        <h2 class="university">DelftX</h2>
+        <h3>
+            <span>FP101x Introduction to Functional Programming</span>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/DelftX/FP101x/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="DelftX/FP101x/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="DelftX/FP101x/3T2014" data-course-number="FP101x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="DelftX/FP101x/3T2014" data-course-number="FP101x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/EPFLx/BIO465x/2013_OND/info" class="cover">
+        <img src="/c4x/EPFLx/BIO465x/asset/coursepic.jpg" alt="BIO465x Neuronal Dynamics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jan 10, 2014
+        </p>
+        <h2 class="university">EPFLx</h2>
+        <h3>
+            <a href="/courses/EPFLx/BIO465x/2013_OND/info">BIO465x Neuronal Dynamics</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           35%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/EPFLx/BIO465x/2013_OND/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="EPFLx/BIO465x/2013_OND" data-course-number="BIO465x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="EPFLx/BIO465x/2013_OND" data-course-number="BIO465x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/ETHx/AMRx/1T2014/info" class="cover">
+        <img src="/c4x/ETHx/AMRx/asset/Home.png" alt="AMRx Autonomous Mobile Robots Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Apr 16, 2014
+        </p>
+        <h2 class="university">ETHx</h2>
+        <h3>
+            <a href="/courses/ETHx/AMRx/1T2014/info">AMRx Autonomous Mobile Robots</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/ETHx/AMRx/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="ETHx/AMRx/1T2014" data-course-number="AMRx" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="ETHx/AMRx/1T2014" data-course-number="AMRx" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/ETHx/CAMSx/3T2014/info" class="cover">
+        <img src="/c4x/ETHx/CAMSx/asset/se-chair-logo.png" alt="CAMSx Computing: Art, Magic, Science Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 30, 2014
+        </p>
+        <h2 class="university">ETHx</h2>
+        <h3>
+            <a href="/courses/ETHx/CAMSx/3T2014/info">CAMSx Computing: Art, Magic, Science</a>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/ETHx/CAMSx/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="ETHx/CAMSx/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+          <a href="/courses/ETHx/CAMSx/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="ETHx/CAMSx/3T2014" data-course-number="CAMSx" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="ETHx/CAMSx/3T2014" data-course-number="CAMSx" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/GeorgetownX/MEDX202-01/2014_SOND/info" class="cover">
+        <img src="/c4x/GeorgetownX/MEDX202-01/asset/images_course_image.jpg" alt="MEDX202-01 Genomic Medicine Gets Personal Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Aug 05, 2014
+        </p>
+        <h2 class="university">GeorgetownX</h2>
+        <h3>
+            <a href="/courses/GeorgetownX/MEDX202-01/2014_SOND/info">MEDX202-01 Genomic Medicine Gets Personal</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">11%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           70%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/GeorgetownX/MEDX202-01/2014_SOND/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="GeorgetownX/MEDX202-01/2014_SOND" data-course-number="MEDX202-01" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="GeorgetownX/MEDX202-01/2014_SOND" data-course-number="MEDX202-01" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/HarvardX/MCB80.1x/2013_SOND/info" class="cover">
+        <img src="/c4x/HarvardX/MCB80.1x/asset/images_course_image.jpg" alt="MCB80.1x Fundamentals of Neuroscience, Part 1: The Electrical Properties of the Neuron Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Feb 03, 2014
+        </p>
+        <h2 class="university">HarvardX</h2>
+        <h3>
+            <a href="/courses/HarvardX/MCB80.1x/2013_SOND/info">MCB80.1x Fundamentals of Neuroscience, Part 1: The Electrical Properties of the Neuron</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/HarvardX/MCB80.1x/2013_SOND/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="HarvardX/MCB80.1x/2013_SOND" data-course-number="MCB80.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="HarvardX/MCB80.1x/2013_SOND" data-course-number="MCB80.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/HarvardX/PH525x/1T2014/info" class="cover">
+        <img src="/c4x/HarvardX/PH525x/asset/maplot_banner.png" alt="PH525x Data Analysis for Genomics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 01, 2014
+        </p>
+        <h2 class="university">HarvardX</h2>
+        <h3>
+            <a href="/courses/HarvardX/PH525x/1T2014/info">PH525x Data Analysis for Genomics</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">25%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           70%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/HarvardX/PH525x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="HarvardX/PH525x/1T2014" data-course-number="PH525x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="HarvardX/PH525x/1T2014" data-course-number="PH525x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/HKUSTx/ELEC1200.1x/3T2014/info" class="cover">
+        <img src="/c4x/HKUSTx/ELEC1200.1x/asset/ELEC1200.1x-Thumbnail.jpg" alt="ELEC1200.1x A System View of Communications: From Signals to Packets (Part 1) Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 15, 2014
+        </p>
+        <h2 class="university">HKUSTx</h2>
+        <h3>
+            <a href="/courses/HKUSTx/ELEC1200.1x/3T2014/info">ELEC1200.1x A System View of Communications: From Signals to Packets (Part 1)</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/HKUSTx/ELEC1200.1x/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="HKUSTx/ELEC1200.1x/3T2014" data-course-number="ELEC1200.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="HKUSTx/ELEC1200.1x/3T2014" data-course-number="ELEC1200.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/KIx/KIexploRx/3T2014/info" class="cover">
+        <img src="/c4x/KIx/KIexploRx/asset/statisticswithr_course_banner608x211.jpg" alt="KIexploRx Explore Statistics with R Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 09, 2014
+        </p>
+        <h2 class="university">KIx</h2>
+        <h3>
+            <a href="/courses/KIx/KIexploRx/3T2014/info">KIexploRx Explore Statistics with R</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/KIx/KIexploRx/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="KIx/KIexploRx/3T2014" data-course-number="KIexploRx" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="KIx/KIexploRx/3T2014" data-course-number="KIexploRx" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/KyotoUx/001x/1T2014/info" class="cover">
+        <img src="/c4x/KyotoUx/001x/asset/images_course_image.jpg" alt="001x The Chemistry of Life Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 25, 2014
+        </p>
+        <h2 class="university">KyotoUx</h2>
+        <h3>
+            <a href="/courses/KyotoUx/001x/1T2014/info">001x The Chemistry of Life</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">5%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           65%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/KyotoUx/001x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="KyotoUx/001x/1T2014" data-course-number="001x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="KyotoUx/001x/1T2014" data-course-number="001x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/LouvainX/Louv1.01x/1T2014/info" class="cover">
+        <img src="/c4x/LouvainX/Louv1.01x/asset/Illu_LouvainX1_262x136.jpg" alt="Louv1.01x Paradigms of Computer Programming Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 12, 2014
+        </p>
+        <h2 class="university">LouvainX</h2>
+        <h3>
+            <a href="/courses/LouvainX/Louv1.01x/1T2014/info">Louv1.01x Paradigms of Computer Programming</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">25%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/LouvainX/Louv1.01x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="LouvainX/Louv1.01x/1T2014" data-course-number="Louv1.01x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="LouvainX/Louv1.01x/1T2014" data-course-number="Louv1.01x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/15.071x/1T2014/info" class="cover">
+        <img src="/c4x/MITx/15.071x/asset/15.071x_CourseImage.png" alt="15.071x The Analytics Edge Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 23, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/15.071x/1T2014/info">15.071x The Analytics Edge</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-processing is-shown">
+
+      <p class="message-copy">Final course details are being wrapped up at this time. Your final standing will be available shortly.</p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/15.071x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/15.071x/1T2014" data-course-number="15.071x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/15.071x/1T2014" data-course-number="15.071x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/2.01x/2T2014/info" class="cover">
+        <img src="/c4x/MITx/2.01x/asset/MITx_2.01x_Course_Image.jpg" alt="2.01x Elements of Structures Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Aug 27, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/2.01x/2T2014/info">2.01x Elements of Structures</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           65%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/2.01x/2T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/2.01x/2T2014" data-course-number="2.01x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/2.01x/2T2014" data-course-number="2.01x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/3.091x_2/1T2014/info" class="cover">
+        <img src="/c4x/MITx/3.091x_2/asset/images_course_image.jpg" alt="3.091x_2 Introduction to Solid State Chemistry Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Aug 29, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/3.091x_2/1T2014/info">3.091x Introduction to Solid State Chemistry</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/3.091x_2/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/3.091x_2/1T2014" data-course-number="3.091x_2" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/3.091x_2/1T2014" data-course-number="3.091x_2" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/6.002_4x/3T2014/info" class="cover">
+        <img src="/c4x/MITx/6.002_4x/asset/images_course_image.jpg" alt="6.002_4x Circuits and Electronics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Aug 25, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/6.002_4x/3T2014/info">6.002x Circuits and Electronics</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/MITx/6.002_4x/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/6.002_4x/3T2014" data-course-number="6.002_4x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/6.002_4x/3T2014" data-course-number="6.002_4x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/6.041x/1T2014/info" class="cover">
+        <img src="/c4x/MITx/6.041x/asset/images_course_image.jpg" alt="6.041x Introduction to Probability - The Science of Uncertainty Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 21, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/6.041x/1T2014/info">6.041x Introduction to Probability - The Science of Uncertainty</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/6.041x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/6.041x/1T2014" data-course-number="6.041x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/6.041x/1T2014" data-course-number="6.041x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/6.832x/3T2014/info" class="cover">
+        <img src="/c4x/MITx/6.832x/asset/images_atlas_thumbnail.jpg" alt="6.832x Underactuated Robotics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Oct 01, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/6.832x/3T2014/info">6.832x Underactuated Robotics</a>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/MITx/6.832x/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="MITx/6.832x/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+          <a href="/courses/MITx/6.832x/3T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/6.832x/3T2014" data-course-number="6.832x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/6.832x/3T2014" data-course-number="6.832x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/7.00x_2/2T2014/info" class="cover">
+        <img src="/c4x/MITx/7.00x_2/asset/images_course_image.jpg" alt="7.00x_2 Introduction to Biology - The Secret of Life Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Sep 10, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/7.00x_2/2T2014/info">7.00x Introduction to Biology - The Secret of Life</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/7.00x_2/2T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/7.00x_2/2T2014" data-course-number="7.00x_2" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/7.00x_2/2T2014" data-course-number="7.00x_2" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/8.02x/2013_Spring/info" class="cover">
+        <img src="/static/8.02x/images/course_image.jpg" alt="8.02x Electricity and Magnetism Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jun 18, 2013
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/8.02x/2013_Spring/info">8.02x Electricity and Magnetism</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-processing is-shown">
+
+      <p class="message-copy">Final course details are being wrapped up at this time. Your final standing will be available shortly.</p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/8.02x/2013_Spring/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/8.02x/2013_Spring" data-course-number="8.02x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/8.MReVx/2T2014/info" class="cover">
+        <img src="/c4x/MITx/8.MReVx/asset/images_course_image.jpg" alt="8.MReVx Mechanics ReView Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Sep 14, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/8.MReVx/2T2014/info">8.MReVx Mechanics ReView</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/8.MReVx/2T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/8.MReVx/2T2014" data-course-number="8.MReVx" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/8.MReVx/2T2014" data-course-number="8.MReVx" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/MITx/MAS.S69x/1T2014/info" class="cover">
+        <img src="/c4x/MITx/MAS.S69x/asset/Why-Social-Physics-262x136.jpg" alt="MAS.S69x Big Data and Social Physics Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 20, 2014
+        </p>
+        <h2 class="university">MITx</h2>
+        <h3>
+            <a href="/courses/MITx/MAS.S69x/1T2014/info">MAS.S69x Big Data and Social Physics</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/MITx/MAS.S69x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="MITx/MAS.S69x/1T2014" data-course-number="MAS.S69x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="MITx/MAS.S69x/1T2014" data-course-number="MAS.S69x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/PekingX/00330280x/2015Q1/info" class="cover">
+        <img src="/c4x/PekingX/00330280x/asset/魅力机器人-1_.JPG" alt="00330280x The Fascinating World of Robots and Robotics 魅力机器人 Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Sep 29, 2014
+        </p>
+        <h2 class="university">PekingX</h2>
+        <h3>
+            <a href="/courses/PekingX/00330280x/2015Q1/info">00330280x The Fascinating World of Robots and Robotics 魅力机器人</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/PekingX/00330280x/2015Q1/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="PekingX/00330280x/2015Q1" data-course-number="00330280x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="PekingX/00330280x/2015Q1" data-course-number="00330280x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/RiceX/BIOC372.1x-F14/2T2014/info" class="cover">
+        <img src="/c4x/RiceX/BIOC372.1x-F14/asset/immunology_608x211.jpg" alt="BIOC372.1x-F14 Fundamentals of Immunology, Part 1 Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Started - Aug 18, 2014
+        </p>
+        <h2 class="university">RiceX</h2>
+        <h3>
+            <a href="/courses/RiceX/BIOC372.1x-F14/2T2014/info">BIOC372.1x Fundamentals of Immunology, Part 1</a>
+        </h3>
+      </hgroup>
+
+
+
+          <a href="/courses/RiceX/BIOC372.1x-F14/2T2014/info" class="enter-course">View Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="RiceX/BIOC372.1x-F14/2T2014" data-course-number="BIOC372.1x-F14" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="RiceX/BIOC372.1x-F14/2T2014" data-course-number="BIOC372.1x-F14" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/RiceX/ELEC301x/T1_2014/info" class="cover">
+        <img src="/c4x/RiceX/ELEC301x/asset/images_course_image.jpg" alt="ELEC301x Discrete Time Signals and Systems Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 08, 2014
+        </p>
+        <h2 class="university">RiceX</h2>
+        <h3>
+            <a href="/courses/RiceX/ELEC301x/T1_2014/info">ELEC301x Discrete Time Signals and Systems</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/RiceX/ELEC301x/T1_2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="RiceX/ELEC301x/T1_2014" data-course-number="ELEC301x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="RiceX/ELEC301x/T1_2014" data-course-number="ELEC301x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/RiceX/PHYS201x/asset/LeadGraphic201x_b.jpg" alt="PHYS201x Waves &amp; Optics Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Starts - Oct 06, 2014
+        </p>
+        <h2 class="university">RiceX</h2>
+        <h3>
+            <span>PHYS201x Waves & Optics</span>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/RiceX/PHYS201x/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="RiceX/PHYS201x/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="RiceX/PHYS201x/3T2014" data-course-number="PHYS201x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="RiceX/PHYS201x/3T2014" data-course-number="PHYS201x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/RiceX/PHYS_102x/1T2014/info" class="cover">
+        <img src="/c4x/RiceX/PHYS_102x/asset/images_course_image.jpg" alt="PHYS_102x Electricity &amp; Magnetism Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Apr 14, 2014
+        </p>
+        <h2 class="university">RiceX</h2>
+        <h3>
+            <a href="/courses/RiceX/PHYS_102x/1T2014/info">PHYS102x Electricity & Magnetism</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-processing is-shown">
+
+      <p class="message-copy">Final course details are being wrapped up at this time. Your final standing will be available shortly.</p>
+
+</div>
+
+
+
+
+          <a href="/courses/RiceX/PHYS_102x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="RiceX/PHYS_102x/1T2014" data-course-number="PHYS_102x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="RiceX/PHYS_102x/1T2014" data-course-number="PHYS_102x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/SNUx/SNU034.005.1x/asset/snux_intro-physics_dashboard.jpg" alt="SNU034.005.1x Introductory Physics - Mechanics and Waves Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Starts - Q4 2014
+        </p>
+        <h2 class="university">SNUx</h2>
+        <h3>
+            <span>SNU034.005.1x Introductory Physics - Mechanics and Waves</span>
+        </h3>
+      </hgroup>
+
+
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="SNUx/SNU034.005.1x/1T2014" data-course-number="SNU034.005.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="SNUx/SNU034.005.1x/1T2014" data-course-number="SNU034.005.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/SNUx/SNU446.345.1x/1T2014/info" class="cover">
+        <img src="/c4x/SNUx/SNU446.345.1x/asset/robot_mechanics_course_banner608x211.jpg" alt="SNU446.345.1x Robot Mechanics and Control, Part I Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 09, 2014
+        </p>
+        <h2 class="university">SNUx</h2>
+        <h3>
+            <a href="/courses/SNUx/SNU446.345.1x/1T2014/info">SNU446.345.1x Robot Mechanics and Control, Part I</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           50%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/SNUx/SNU446.345.1x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="SNUx/SNU446.345.1x/1T2014" data-course-number="SNU446.345.1x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="SNUx/SNU446.345.1x/1T2014" data-course-number="SNU446.345.1x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/TsinghuaX/60240013x/asset/images_course_image.jpg" alt="60240013x Combinatorial Mathematics Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course has not yet started
+        </p>
+        <h2 class="university">TsinghuaX</h2>
+        <h3>
+            <span>60240013x Combinatorial Mathematics</span>
+        </h3>
+      </hgroup>
+
+
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="TsinghuaX/60240013x/3T2014" data-course-number="60240013x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="TsinghuaX/60240013x/3T2014" data-course-number="60240013x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/TUMx/AUTONAVx/2T2014/info" class="cover">
+        <img src="/c4x/TUMx/AUTONAVx/asset/logo.png" alt="AUTONAVx Autonomous Navigation for Flying Robots Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 01, 2014
+        </p>
+        <h2 class="university">TUMx</h2>
+        <h3>
+            <a href="/courses/TUMx/AUTONAVx/2T2014/info">AUTONAVx Autonomous Navigation for Flying Robots</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+         Grade required for a Certificate: <span class="grade-value">
+           60%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/TUMx/AUTONAVx/2T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="TUMx/AUTONAVx/2T2014" data-course-number="AUTONAVx" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="TUMx/AUTONAVx/2T2014" data-course-number="AUTONAVx" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course audit">
+    
+
+        <a href="/courses/UQx/BIOIMG101x/1T2014/info" class="cover">
+        <img src="/c4x/UQx/BIOIMG101x/asset/BIOIMAG101x_Course-Banner.png" alt="BIOIMG101x Biomedical Imaging Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're auditing this course">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Auditing</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jul 06, 2014
+        </p>
+        <h2 class="university">UQx</h2>
+        <h3>
+            <a href="/courses/UQx/BIOIMG101x/1T2014/info">BIOIMG101x Biomedical Imaging</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certnotavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">0%</span>.
+      </p>
+
+</div>
+
+
+
+
+          <a href="/courses/UQx/BIOIMG101x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UQx/BIOIMG101x/1T2014" data-course-number="BIOIMG101x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UQx/BIOIMG101x/1T2014" data-course-number="BIOIMG101x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/UQx/Sense101x/asset/SENSE101x-v2.jpg" alt="Sense101x Sense, Control, Act: Measure the Universe, Transform the World Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course has not yet started
+        </p>
+        <h2 class="university">UQx</h2>
+        <h3>
+            <span>Sense101x Sense, Control, Act: Measure the Universe, Transform the World</span>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/UQx/Sense101x/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="UQx/Sense101x/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UQx/Sense101x/3T2014" data-course-number="Sense101x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UQx/Sense101x/3T2014" data-course-number="Sense101x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/UTArlingtonX/LINK5.10x/asset/images_course_image.jpg" alt="LINK5.10x Data, Analytics, and Learning Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Starts - Oct 19, 2014
+        </p>
+        <h2 class="university">UTArlingtonX</h2>
+        <h3>
+            <span>LINK5.10x Data, Analytics, and Learning</span>
+        </h3>
+      </hgroup>
+
+
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UTArlingtonX/LINK5.10x/3T2014" data-course-number="LINK5.10x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UTArlingtonX/LINK5.10x/3T2014" data-course-number="LINK5.10x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course audit">
+    
+
+        <a href="/courses/UTAustinX/UT.5.01x/1T2014/info" class="cover">
+        <img src="/c4x/UTAustinX/UT.5.01x/asset/UT.5.01xAboutStill.jpg" alt="UT.5.01x LAFF: Linear Algebra - Foundations to Frontiers Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're auditing this course">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Auditing</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - Jun 04, 2014
+        </p>
+        <h2 class="university">UTAustinX</h2>
+        <h3>
+            <a href="/courses/UTAustinX/UT.5.01x/1T2014/info">UT.5.01x LAFF: Linear Algebra - Foundations to Frontiers</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">70%</span>.
+      </p>
+
+  <ul class="actions">
+      <li class="action action-certificate">
+      <a class="btn" href="https://s3.amazonaws.com/verify.edx.org/downloads/7290913a6579455b8ce466632b2abb1f/Certificate.pdf"
+         title="This link will open/download a PDF document">
+         Download Your Certificate (PDF)</a></li>
+
+  </ul>
+</div>
+
+
+
+
+          <a href="/courses/UTAustinX/UT.5.01x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UTAustinX/UT.5.01x/1T2014" data-course-number="UT.5.01x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UTAustinX/UT.5.01x/1T2014" data-course-number="UT.5.01x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+        <a href="/courses/UTAustinX/UT.6.01x/1T2014/info" class="cover">
+        <img src="/c4x/UTAustinX/UT.6.01x/asset/UT.6.01x_Banner_608x212.jpg" alt="UT.6.01x Embedded Systems - Shape the World Cover Image" />
+      </a>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Completed - May 22, 2014
+        </p>
+        <h2 class="university">UTAustinX</h2>
+        <h3>
+            <a href="/courses/UTAustinX/UT.6.01x/1T2014/info">UT.6.01x Embedded Systems - Shape the World</a>
+        </h3>
+      </hgroup>
+
+      
+
+
+
+
+
+
+<div class="message message-status course-status-certavailable is-shown">
+
+      <p class="message-copy">Your final grade:
+      <span class="grade-value">84%</span>.
+      </p>
+
+  <ul class="actions">
+      <li class="action action-certificate">
+      <a class="btn" href="https://s3.amazonaws.com/verify.edx.org/downloads/bd7f81c70d544c35a32e9c7aa5ee4346/Certificate.pdf"
+         title="This link will open/download a PDF document">
+         Download Your Certificate (PDF)</a></li>
+
+  </ul>
+</div>
+
+
+
+
+          <a href="/courses/UTAustinX/UT.6.01x/1T2014/info" class="enter-course archived">View Archived Course</a>
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UTAustinX/UT.6.01x/1T2014" data-course-number="UT.6.01x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UTAustinX/UT.6.01x/1T2014" data-course-number="UT.6.01x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+<li class="course-item">
+    <article class="course honor">
+    
+
+      <div class="cover">
+        <img src="/c4x/UTAustinX/UT.7.01x/asset/images_course_image.jpg" alt="UT.7.01x Foundations of Data Analysis Cover Image" />
+      </div>
+          <span class="sts-enrollment" title="You're enrolled as an honor code student">
+            <span class="label">Enrolled as: </span>
+            <span class="sts-enrollment-value">Honor Code</span>
+          </span>
+
+    <section class="info">
+      <hgroup>
+        <p class="date-block">
+        Course Starts - Nov 04, 2014
+        </p>
+        <h2 class="university">UTAustinX</h2>
+        <h3>
+            <span>UT.7.01x Foundations of Data Analysis</span>
+        </h3>
+      </hgroup>
+
+
+        <div class="message message-upsell has-actions is-expandable is-shown">
+
+            <div class="wrapper-tip">
+              <h4 class="message-title">
+                <i class="icon-caret-down ui-toggle-expansion"></i>
+                  <span class="value">Challenge Yourself!</span>
+              </h4>
+              <p class="message-copy">Take this course as an ID-verified student.</p>
+            </div>
+
+            <div class="wrapper-extended">
+                <p class="message-copy">You can still sign up for an ID verified Certificate of Achievement for this course. If you plan to complete the whole course, it is a great way to recognize your achievement. <a href="https://www.edx.org/verified-certificate">Learn more about the verified Certificate of Achievement</a>.</p>
+
+              <ul class="actions message-actions">
+                <li class="action-item">
+                  <a class="action action-upgrade" href="/course_modes/choose/UTAustinX/UT.7.01x/3T2014/?upgrade=True">
+                    <img class="deco-graphic" src="https://d37djvu3ytnwxt.cloudfront.net/static/images/vcert-ribbon-s.b9a273b0cebf.png" alt="ID Verified Ribbon/Badge">
+                    <span class="wrapper-copy">
+                      <span class="copy" id="upgrade-to-verified" data-course-id="UTAustinX/UT.7.01x/3T2014" data-user="AppanPonnappan">Upgrade to Verified Track</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+
+        <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="UTAustinX/UT.7.01x/3T2014" data-course-number="UT.7.01x" onclick="document.getElementById('track-info').innerHTML='Are you sure you want to unregister from'; document.getElementById('refund-info').innerHTML=''">
+          Unregister
+        </a>
+
+        <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="UTAustinX/UT.7.01x/3T2014" data-course-number="UT.7.01x" data-optout="False">Email Settings</a>
+
+
+
+  </section>
+</article>
+</article>
+</li>
+ <script>
+           $( document ).ready(function() {
+
+               if("False" == "True"){
+                   $( "#unregister_block_course" ).click(function() {
+                       $('.disable-look-unregister').click();
+                   });
+               }
+           });
+ </script>
+
+      </ul>
+
+  </section>
+</section>
+
+<section id="email-settings-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="email-settings-title">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="email-settings-title">
+        Email Settings for <span id="email_settings_course_number"></span>
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+
+    <form id="email_settings_form" method="post">
+      <input name="course_id" id="email_settings_course_id" type="hidden" />
+      <label>Receive course emails <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
+      <div class="submit">
+        <input type="submit" id="submit" value="Save Settings" />
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+<section id="password_reset_complete" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="password-reset-email">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="password-reset-email">
+        Password Reset Email Sent
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div>
+      <form> <!-- Here for styling reasons -->
+        <section>
+          <p>An email has been sent to appanponn@gmail.com. Follow the link in the email to change your password.</p>
+        </section>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="change_email" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="change_email_title">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+        <span id="change_email_title">Change Email</span>
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div id="change_email_body">
+      <form id="change_email_form">
+        <div id="change_email_error" class="modal-form-error"> </div>
+        <fieldset>
+          <div class="input-group">
+            <label>Please enter your new email address:</label>
+            <input id="new_email_field" type="email" value="" />
+            <label>Please confirm your password:</label>
+            <input id="new_email_password" value="" type="password" />
+          </div>
+          <section>
+            <p>We will send a confirmation to both appanponn@gmail.com and your new email address as part of the process.</p>
+          </section>
+          <div class="submit">
+            <input type="submit" id="submit_email_change" value="Change Email"/>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="change_language" class="modal modal-settings-language" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="change_language_title">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2>
+        <span id="change_language_title">Change Preferred Language</span>
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div id="change_language_body">
+      <form action="/i18n/setlang/" method="post" class="settings-language-form" id="settings-form">
+      <input type="hidden" name="csrfmiddlewaretoken" value="NFESEVUKwHZlsGz04wBn3qr39zAF9apc">
+        <ol class="list-input">
+          <li class="field text settings-language-select" id="settings-language-select">
+            <label class="label sr" for="settings-language-value">Please choose your preferred language</label>
+            <select class="input select" id="settings-language-value" name="language">
+                    <option value="en" selected="selected">English</option>
+                    <option value="es-419">Español (Latinoamérica)</option>
+                    <option value="fr">Français</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="pt-br">Português (Brasil)</option>
+                    <option value="zh-cn">中文 (简体)</option>
+            </select>
+          </li>
+        </ol>
+
+        <div class="submit">
+          <input type="submit" id="submit-lang" value="Save Language Settings" />
+        </div>
+      </form>
+
+      <ul class="list list-actions actions-supplemental">
+        <li class="list-actions-item">
+        Don't see your preferred language? <a class=" action action-volunteer" rel="external" target="_blank" href="https://github.com/edx/edx-platform/blob/master/docs/en_us/developers/source/i18n_translators_guide.rst">Volunteer to become a translator!</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="apply_name_change" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="change-name-title">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="change-name-title">
+        Change your name
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div id="change_name_body">
+      <form id="change_name_form">
+        <div id="change_name_error" class="modal-form-error"> </div>
+        <p>To uphold the credibility of your edX Certificate, all name changes will be recorded.</p>
+        <br/>
+        <fieldset>
+          <div class="input-group">
+            <label>Enter your desired full name, as it will appear on your edX Certificate:</label>
+            <input id="new_name_field" value="" type="text" />
+            <label>Reason for name change:</label>
+            <textarea id="name_rationale_field" value=""></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" id="submit" value="Change My Name">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
+  <div class="inner-wrapper" role="alertdialog" aria-labelledy="unenrollment-modal-title">
+    <button class="close-modal">
+      <i class="icon-remove"></i>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="unenrollment-modal-title">
+        <span id='track-info'></span> <span id='unenroll_course_number'></span>?  <span id='refund-info'></span>
+        <span class="sr">,
+          window open
+        </span>
+      </h2>
+      <hr/>
+    </header>
+    <div id="unenroll_error" class="modal-form-error"></div>
+    <form id="unenroll_form" method="post" data-remote="true" action="/change_enrollment">
+      <input name="course_id" id="unenroll_course_id" type="hidden" />
+      <input name="enrollment_action" type="hidden" value="unenroll" />
+      <div class="submit">
+        <input name="submit" type="submit" value="Unregister" />
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+    $(function() {
+        $("#unregister_block_course").click( function(event) {
+            $("#unenroll_course_id").val( $(event.target).data("course-id") );
+            $("#unenroll_course_number").text( $(event.target).data("course-number") );
+        });
+    });
+</script>
+
+
+    
+  </div>
+
+  
+
+
+
+<div class="wrapper wrapper-footer edx-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+      <ol>
+          <li class="nav-colophon-01">
+          <a id="about" href="https://www.edx.org/about-us">
+              About
+          </a>
+          </li>
+          <li class="nav-colophon-02">
+          <a id="jobs" href="https://www.edx.org/jobs">
+              Jobs
+          </a>
+          </li>
+          <li class="nav-colophon-03">
+          <a id="press" href="https://www.edx.org/press">
+              Press
+          </a>
+          </li>
+          <li class="nav-colophon-04">
+          <a id="faq" href="https://www.edx.org/student-faq">
+              FAQ
+          </a>
+          </li>
+          <li class="nav-colophon-05">
+          <a id="contact" href="https://www.edx.org/contact">
+              Contact
+          </a>
+          </li>
+      </ol>
+      </nav>
+
+      <div class="colophon-about">
+        <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/header-logo.517a627deaad.png" alt="edX Logo" />
+
+        <p>
+            EdX is a non-profit created by founding partners Harvard and MIT whose mission is to bring the best of higher education to students of all ages anywhere in the world, wherever there is Internet access. EdX's free online MOOCs are interactive and subjects include computer science, public health, and artificial intelligence.
+        </p>
+      </div>
+    </div>
+
+    <div class="references">
+      <nav class="nav-social">
+        <ul>
+          <li class="nav-social-01">
+            <a href="http://www.meetup.com/YourMeetup" rel="external">
+              <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/social/ico-social-meetup.78eb0b41cc3d.png" alt="edX on Meetup" />
+            </a>
+          </li>
+          <li class="nav-social-02">
+            <a href="http://www.facebook.com/EdxOnline" rel="external">
+              <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/social/ico-social-facebook.6757cc212a18.png" alt="edX on Facebook" />
+            </a>
+          </li>
+          <li class="nav-social-03">
+            <a href="https://twitter.com/YourPlatformTwitterAccount" rel="external">
+              <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/social/ico-social-twitter.59116eaa21b7.png" alt="edX on Twitter" />
+            </a>
+          </li>
+          <li class="nav-social-04">
+            <a href="https://plus.google.com/YourGooglePlusAccount/" rel="external">
+              <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/social/ico-social-google.0fcff64a115e.png" alt="edX on Google+" />
+            </a>
+          </li>
+          <li class="nav-social-05">
+            <a href="http://youtube.com/user/edxonline" rel="external">
+              <img src="https://d37djvu3ytnwxt.cloudfront.net/static/images/social/ico-social-youtube.909f05910c79.png" alt="edX on YouTube" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="copyright">&copy; 2014 edX, some rights reserved.</p>
+
+      <nav class="nav-legal">
+        <ul>
+          <li class="nav-legal-01">
+            <a href="https://www.edx.org/edx-terms-service">Terms of Service and Honor Code</a>
+          </li>
+          <li class="nav-legal-02">
+            <a href="https://www.edx.org/edx-privacy-policy">Privacy Policy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+
+  <script>window.baseUrl = "https://d37djvu3ytnwxt.cloudfront.net/static/";</script>
+  
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-application.7babfddf965d.js" charset="utf-8"></script>
+
+
+  
+    <script type="text/javascript" src="https://d37djvu3ytnwxt.cloudfront.net/static/js/lms-modules.cac55f0065f8.js" charset="utf-8"></script>
+
+
+
+  
+  <script type="text/javascript">
+  (function() {
+
+    $('.message.is-expandable .wrapper-tip').bind('click', toggleExpandMessage);
+
+    function toggleExpandMessage(e) {
+        (e).preventDefault();
+
+        $(this).closest('.message.is-expandable').toggleClass('is-expanded');
+
+        course = $("#upgrade-to-verified").data("course-id");
+        analytics.track('edx.bi.dashboard.upsell_copy.clicked', {
+          category: 'user-engagement',
+          label: course
+        });
+    }
+
+    $("#failed-verification-button-dismiss").click(function(event) {
+      $.ajax({
+        url: "/verify_student/toggle_failed_banner_off",
+        type: "post"
+        })
+      $("#failed-verification-banner").addClass('is-hidden');
+      })
+
+    $("#upgrade-to-verified").click(function(event) {
+      user = $(event.target).data("user");
+      course = $(event.target).data("course-id");
+      Logger.log('edx.course.enrollment.upgrade.clicked', [user, course], null);
+    });
+
+    $(".email-settings").click(function(event) {
+      $("#email_settings_course_id").val( $(event.target).data("course-id") );
+      $("#email_settings_course_number").text( $(event.target).data("course-number") );
+      if($(event.target).data("optout") == "False") {
+        $("#receive_emails").prop('checked', true);
+      }
+    });
+
+    $(".unenroll").click(function(event) {
+      $("#unenroll_course_id").val( $(event.target).data("course-id") );
+      $("#unenroll_course_number").text( $(event.target).data("course-number") );
+    });
+
+    $('#unenroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        location.href = "/dashboard";
+      } else if (xhr.status == 403) {
+        location.href = "/login?course_id=" +
+          $("#unenroll_course_id").val() + "&enrollment_action=unenroll";
+      } else {
+        $('#unenroll_error').html(
+          xhr.responseText ? xhr.responseText : "An error occurred. Please try again later."
+        ).stop().css("display", "block");
+      }
+    });
+
+    $('#pwd_reset_button').click(function() {
+      $.post('/password_reset/',
+             {"email"  : $('#id_email').val()},
+             function(data){
+               $("#password_reset_complete_link").click();
+             });
+    });
+
+    $("#submit-lang").click(function(event, xhr) {
+        event.preventDefault();
+        $.post('/lang_pref/setlang/',
+            {"language": $('#settings-language-value').val()})
+        .done(
+            function(data){
+                // submit form as normal
+                $('.settings-language-form').submit();
+            }
+        );
+    });
+
+    $("#change_email_form").submit(function(){
+      var new_email = $('#new_email_field').val();
+      var new_password = $('#new_email_password').val();
+
+      $.post('/change_email',
+               {"new_email" : new_email, "password" : new_password},
+               function(data) {
+                 if (data.success) {
+                   $("#change_email_title").html("Please verify your new email address");
+                   $("#change_email_form").html("<p>You'll receive a confirmation in your inbox. Please follow the link in the email to confirm your email address change.</p>");
+                 } else {
+                   $("#change_email_error").html(data.error).stop().css("display", "block");
+                 }
+               });
+      return false;
+    });
+
+    $("#change_name_form").submit(function(){
+      var new_name = $('#new_name_field').val();
+      var rationale = $('#name_rationale_field').val();
+
+      $.post('/change_name',
+             {"new_name":new_name, "rationale":rationale},
+             function(data) {
+               if(data.success) {
+                 location.reload();
+               } else {
+                 $("#change_name_error").html(data.error).stop().css("display", "block");
+               }
+             });
+       return false;
+    });
+
+    $("#email_settings_form").submit(function(){
+      $.ajax({
+        type: "POST",
+        url: '/change_email_settings',
+        data: $(this).serializeArray(),
+        success: function(data) {
+          if(data.success) {
+            location.href = "/dashboard";
+          }
+        },
+        error: function(xhr, textStatus, error) {
+          if (xhr.status == 403) {
+            location.href = "/login";
+          }
+        }
+      });
+      return false;
+    });
+  })(this);
+
+  $(function(){
+    accessible_modal(".edit-name", "#apply_name_change .close-modal", "#apply_name_change", "#dashboard-main");
+
+    accessible_modal(".edit-email", "#change_email .close-modal", "#change_email", "#dashboard-main");
+
+    accessible_modal("#pwd_reset_button", "#password_reset_complete .close-modal", "#password_reset_complete", "#dashboard-main");
+
+
+    $(".email-settings").each(function(index){
+      $(this).attr("id", "unenroll-" + index);
+      // a bit of a hack, but gets the unique selector for the modal trigger
+      var trigger = "#" + $(this).attr("id");
+      accessible_modal(trigger, "#email-settings-modal .close-modal", "#email-settings-modal", "#dashboard-main");
+    });
+
+    $(".unenroll").each(function(index){
+      $(this).attr("id", "email-settings-" + index);
+      // a bit of a hack, but gets the unique selector for the modal trigger
+      var trigger = "#" + $(this).attr("id");
+      accessible_modal(trigger, "#unenroll-modal .close-modal", "#unenroll-modal", "#dashboard-main");
+    });
+  });
+  </script>
+
+
+  <!-- begin Segment.io -->
+<script type="text/javascript">
+  // Asynchronously load Segment.io's analytics.js library
+  window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var method=window.analytics.methods[i];window.analytics[method]=window.analytics.factory(method)}window.analytics.load=function(t){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)},window.analytics.SNIPPET_VERSION="2.0.8",
+  analytics.load("8fncv13bt5");
+  analytics.page();
+
+    window.identifyUser("2378566", "appanponn@gmail.com", "AppanPonnappan");
+
+  // Get current page URL
+  var url = window.location.href
+  // Match on the current url and fire the appropriate pageview event
+  if (url.indexOf("/register") > -1) {
+    // Registration page viewed
+    analytics.track("edx.bi.page.register.viewed", {
+      category: "pageview",
+      noninteraction: 1
+    });
+  } else if (url.indexOf("/login") > -1) {
+    // Login page viewed
+    analytics.track("edx.bi.page.login.viewed", {
+      category: "pageview",
+      noninteraction: 1
+    });
+  } else if (url.indexOf("/dashboard") > -1) {
+    // Dashboard viewed
+    analytics.track("edx.bi.page.dashboard.viewed", {
+      category: "pageview",
+      noninteraction: 1
+    });
+  } else {
+    // This event serves as a catch-all, firing when any other page is viewed
+    analytics.track("edx.bi.page.other.viewed", {
+      category: "pageview",
+      url: location.host + location.pathname + location.search,
+      noninteraction: 1
+    });
+  }
+
+</script>
+<!-- end Segment.io -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","queueTime":0,"licenseKey":"1beac94c95","agent":"js-agent.newrelic.com/nr-476.min.js","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYFUIXBQFbQBkVWVZBRFxSAxIMV1tWEVQ=","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":2058}</script></body>
+</html>
+
+

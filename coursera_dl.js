@@ -208,16 +208,10 @@ function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
             get_posts_list.page_id = pg_id;
     if ( typeof last_update_time != 'undefined' ) {
         get_posts_list.last_update_time = last_update_time;
-		get_posts_list.max_pg_ver += 1;
+		//get_posts_list.max_pg_ver += 1;
     }
   }
 
-  var op_file ='';
-  if (get_posts_list.last_update_time != 0)
-        op_file = class_lists_dir+'/'+get_posts_list.page_id+
-                    '.'+get_posts_list.max_pg_ver+'.json';
-  else
-        op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
   //if ( get_posts_list.page_id <= get_posts_list.max_page_id ) {
   if ( !stop_fetching() ) {
    var urls = [];
@@ -334,6 +328,15 @@ function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
 					get_posts_list.fetched_posts = urls.length;
                     console.log("...Updates DL: urls array length: "+urls.length);
                     if (urls.length != 0) {
+                        var op_file ='';
+                        if (get_posts_list.last_update_time != 0) {
+                            if ( typeof last_update_time != 'undefined' )
+		                        get_posts_list.max_pg_ver += 1;
+                            op_file = class_lists_dir+'/'+get_posts_list.page_id+
+                                    '.'+get_posts_list.max_pg_ver+'.json';
+                        }
+                        else
+                            op_file = class_lists_dir+'/'+get_posts_list.page_id+'.json';
 					    fs.writeFileSync(op_file, JSON.stringify(json_obj,undefined,2));
 					    if ( other_opts != 'lists-only' )
                             setTimeout(function() {
@@ -344,8 +347,10 @@ function get_posts_list(delay, pg_id, max_pg_ver, dl_state, last_update_time) {
                                     get_posts_list(delay);
                             },delay);
                     }
-                    else
-                        console.log("...Updated everything - Ending");
+                    else {
+                        console.log("...Updated everything - Checking again ...");
+                        get_updates_from(1,get_posts_list.max_pg_ver);
+                    }
 				    });
   			//fs.writeFile('rsp_json.gz',body);
         	}

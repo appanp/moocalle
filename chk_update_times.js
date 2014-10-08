@@ -5,7 +5,9 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
-class_lists_dir = '../statistics-002/lists/';
+//class_lists_dir = '../statistics-002/lists/';
+var class_name = process.argv[2];
+class_lists_dir = '../'+class_name+'/lists/';
 function get_list_len() {
     var list_files = fs.readdirSync(class_lists_dir);
     var max_ver_ids = [];
@@ -35,7 +37,7 @@ function get_list_len() {
 }
 
 //Start of the main program
-post_last_updt_ts = {};
+//post_last_updt_ts = {};
 post_prev_updt_ts = {};
 
 lst_len = get_list_len();
@@ -45,8 +47,10 @@ for(i = 0;i < lst_len.length;i++) {
 
 for(i = 0;i < lst_len.length-1;i++) {
 	//Maintain some stats
+    console.log("Comparing versions: "+(i+1)+" & "+(i+2));
 	var new_posts = 0;
 	var updt_posts = 0;
+    var updt_posts_after = 0;
 	for(j = 1;j < lst_len[i];j++) {
 		var f_name = class_lists_dir;
 		if(i == 0)
@@ -64,6 +68,7 @@ for(i = 0;i < lst_len.length-1;i++) {
         }
     }
 	var found_un_updt = false;
+    var num_posts_reDLed = 0;
 	for(j = 1;j < lst_len[i+1];j++) {
 		var f_name = class_lists_dir+j+'.'+(i+1)+'.json';
         var lst_json_str = fs.readFileSync(f_name);
@@ -78,7 +83,7 @@ for(i = 0;i < lst_len.length-1;i++) {
 				var prev_ts = post_prev_updt_ts[post_id];
 				if(prev_ts < last_upd_time) {
 					updt_posts += 1;
-					post_last_updt_ts[post_id] = last_upd_time;
+					post_prev_updt_ts[post_id] = last_upd_time;
 				}
 				else if(prev_ts == last_upd_time) {
 					console.log("--- Found un-updated post id: "+
@@ -86,23 +91,31 @@ for(i = 0;i < lst_len.length-1;i++) {
 					found_un_updt = true;
 				}
 				else
-					console.log("****** STRANGE: Found a post with older timestamp");
+					console.log("****** STRANGE: Found a post with older timestamp (before)");
 			}
 			else {
 				new_posts += 1;
-				post_last_updt_ts[post_id] = last_upd_time;
+				post_prev_updt_ts[post_id] = last_upd_time;
 			}
 		  }
 		  else {
 			if(post_id in post_prev_updt_ts) {
 				var prev_ts = post_prev_updt_ts[post_id];
-				if(prev_ts != last_upd_time)
-					console.log("****** FOUND an updated post id:"+
-							post_id+" after un-updated orev. post in file: "+
-							f_name);
+				if (prev_ts < last_upd_time) {
+                    updt_posts += 1;
+                    updt_posts_after += 1;
+                }
+                else if (prev_ts == last_upd_time)
+                    num_posts_reDLed += 1;
+                else
+					console.log("****** STRANGE: Found a post with older timestamp (after)");
 		  	}
 		  }
         }
     }
+    console.log("----Num. of posts re-DLed: "+num_posts_reDLed);
+	console.log("----Num. of new posts: "+new_posts);
+    console.log("----Num. of updated posts: "+updt_posts);
+    console.log("----Num. of updated posts after: "+updt_posts_after);
 }
 
